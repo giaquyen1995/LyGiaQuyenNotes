@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B548B00B2A4307E9002CD580 /* LyGiaQuyenNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B548B00A2A4307E9002CD580 /* LyGiaQuyenNotesApp.swift */; };
+		B548B00D2A4307E9002CD580 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B548B00C2A4307E9002CD580 /* ContentView.swift */; };
+		B548B00F2A4307EB002CD580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B548B00E2A4307EB002CD580 /* Assets.xcassets */; };
+		B548B0132A4307EB002CD580 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B548B0122A4307EB002CD580 /* Preview Assets.xcassets */; };
+		B548B01D2A4307EB002CD580 /* LyGiaQuyenNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B548B01C2A4307EB002CD580 /* LyGiaQuyenNotesTests.swift */; };
+		B548B0272A4307EB002CD580 /* LyGiaQuyenNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B548B0262A4307EB002CD580 /* LyGiaQuyenNotesUITests.swift */; };
+		B548B0292A4307EB002CD580 /* LyGiaQuyenNotesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B548B0282A4307EB002CD580 /* LyGiaQuyenNotesUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B548B0192A4307EB002CD580 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B548AFFF2A4307E9002CD580 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B548B0062A4307E9002CD580;
+			remoteInfo = LyGiaQuyenNotes;
+		};
+		B548B0232A4307EB002CD580 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B548AFFF2A4307E9002CD580 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B548B0062A4307E9002CD580;
+			remoteInfo = LyGiaQuyenNotes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B548B0072A4307E9002CD580 /* LyGiaQuyenNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyGiaQuyenNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B548B00A2A4307E9002CD580 /* LyGiaQuyenNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyGiaQuyenNotesApp.swift; sourceTree = "<group>"; };
+		B548B00C2A4307E9002CD580 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B548B00E2A4307EB002CD580 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B548B0102A4307EB002CD580 /* LyGiaQuyenNotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LyGiaQuyenNotes.entitlements; sourceTree = "<group>"; };
+		B548B0122A4307EB002CD580 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B548B0182A4307EB002CD580 /* LyGiaQuyenNotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyGiaQuyenNotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B548B01C2A4307EB002CD580 /* LyGiaQuyenNotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyGiaQuyenNotesTests.swift; sourceTree = "<group>"; };
+		B548B0222A4307EB002CD580 /* LyGiaQuyenNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyGiaQuyenNotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B548B0262A4307EB002CD580 /* LyGiaQuyenNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyGiaQuyenNotesUITests.swift; sourceTree = "<group>"; };
+		B548B0282A4307EB002CD580 /* LyGiaQuyenNotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyGiaQuyenNotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B548B0042A4307E9002CD580 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B548B0152A4307EB002CD580 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B548B01F2A4307EB002CD580 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B548AFFE2A4307E9002CD580 = {
+			isa = PBXGroup;
+			children = (
+				B548B0092A4307E9002CD580 /* LyGiaQuyenNotes */,
+				B548B01B2A4307EB002CD580 /* LyGiaQuyenNotesTests */,
+				B548B0252A4307EB002CD580 /* LyGiaQuyenNotesUITests */,
+				B548B0082A4307E9002CD580 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B548B0082A4307E9002CD580 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B548B0072A4307E9002CD580 /* LyGiaQuyenNotes.app */,
+				B548B0182A4307EB002CD580 /* LyGiaQuyenNotesTests.xctest */,
+				B548B0222A4307EB002CD580 /* LyGiaQuyenNotesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B548B0092A4307E9002CD580 /* LyGiaQuyenNotes */ = {
+			isa = PBXGroup;
+			children = (
+				B548B00A2A4307E9002CD580 /* LyGiaQuyenNotesApp.swift */,
+				B548B00C2A4307E9002CD580 /* ContentView.swift */,
+				B548B00E2A4307EB002CD580 /* Assets.xcassets */,
+				B548B0102A4307EB002CD580 /* LyGiaQuyenNotes.entitlements */,
+				B548B0112A4307EB002CD580 /* Preview Content */,
+			);
+			path = LyGiaQuyenNotes;
+			sourceTree = "<group>";
+		};
+		B548B0112A4307EB002CD580 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B548B0122A4307EB002CD580 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B548B01B2A4307EB002CD580 /* LyGiaQuyenNotesTests */ = {
+			isa = PBXGroup;
+			children = (
+				B548B01C2A4307EB002CD580 /* LyGiaQuyenNotesTests.swift */,
+			);
+			path = LyGiaQuyenNotesTests;
+			sourceTree = "<group>";
+		};
+		B548B0252A4307EB002CD580 /* LyGiaQuyenNotesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B548B0262A4307EB002CD580 /* LyGiaQuyenNotesUITests.swift */,
+				B548B0282A4307EB002CD580 /* LyGiaQuyenNotesUITestsLaunchTests.swift */,
+			);
+			path = LyGiaQuyenNotesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B548B0062A4307E9002CD580 /* LyGiaQuyenNotes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B548B02C2A4307EB002CD580 /* Build configuration list for PBXNativeTarget "LyGiaQuyenNotes" */;
+			buildPhases = (
+				B548B0032A4307E9002CD580 /* Sources */,
+				B548B0042A4307E9002CD580 /* Frameworks */,
+				B548B0052A4307E9002CD580 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LyGiaQuyenNotes;
+			productName = LyGiaQuyenNotes;
+			productReference = B548B0072A4307E9002CD580 /* LyGiaQuyenNotes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B548B0172A4307EB002CD580 /* LyGiaQuyenNotesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B548B02F2A4307EB002CD580 /* Build configuration list for PBXNativeTarget "LyGiaQuyenNotesTests" */;
+			buildPhases = (
+				B548B0142A4307EB002CD580 /* Sources */,
+				B548B0152A4307EB002CD580 /* Frameworks */,
+				B548B0162A4307EB002CD580 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B548B01A2A4307EB002CD580 /* PBXTargetDependency */,
+			);
+			name = LyGiaQuyenNotesTests;
+			productName = LyGiaQuyenNotesTests;
+			productReference = B548B0182A4307EB002CD580 /* LyGiaQuyenNotesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B548B0212A4307EB002CD580 /* LyGiaQuyenNotesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B548B0322A4307EB002CD580 /* Build configuration list for PBXNativeTarget "LyGiaQuyenNotesUITests" */;
+			buildPhases = (
+				B548B01E2A4307EB002CD580 /* Sources */,
+				B548B01F2A4307EB002CD580 /* Frameworks */,
+				B548B0202A4307EB002CD580 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B548B0242A4307EB002CD580 /* PBXTargetDependency */,
+			);
+			name = LyGiaQuyenNotesUITests;
+			productName = LyGiaQuyenNotesUITests;
+			productReference = B548B0222A4307EB002CD580 /* LyGiaQuyenNotesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B548AFFF2A4307E9002CD580 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					B548B0062A4307E9002CD580 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					B548B0172A4307EB002CD580 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = B548B0062A4307E9002CD580;
+					};
+					B548B0212A4307EB002CD580 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = B548B0062A4307E9002CD580;
+					};
+				};
+			};
+			buildConfigurationList = B548B0022A4307E9002CD580 /* Build configuration list for PBXProject "LyGiaQuyenNotes" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B548AFFE2A4307E9002CD580;
+			productRefGroup = B548B0082A4307E9002CD580 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B548B0062A4307E9002CD580 /* LyGiaQuyenNotes */,
+				B548B0172A4307EB002CD580 /* LyGiaQuyenNotesTests */,
+				B548B0212A4307EB002CD580 /* LyGiaQuyenNotesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B548B0052A4307E9002CD580 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B548B0132A4307EB002CD580 /* Preview Assets.xcassets in Resources */,
+				B548B00F2A4307EB002CD580 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B548B0162A4307EB002CD580 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B548B0202A4307EB002CD580 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B548B0032A4307E9002CD580 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B548B00D2A4307E9002CD580 /* ContentView.swift in Sources */,
+				B548B00B2A4307E9002CD580 /* LyGiaQuyenNotesApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B548B0142A4307EB002CD580 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B548B01D2A4307EB002CD580 /* LyGiaQuyenNotesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B548B01E2A4307EB002CD580 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B548B0292A4307EB002CD580 /* LyGiaQuyenNotesUITestsLaunchTests.swift in Sources */,
+				B548B0272A4307EB002CD580 /* LyGiaQuyenNotesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B548B01A2A4307EB002CD580 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B548B0062A4307E9002CD580 /* LyGiaQuyenNotes */;
+			targetProxy = B548B0192A4307EB002CD580 /* PBXContainerItemProxy */;
+		};
+		B548B0242A4307EB002CD580 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B548B0062A4307E9002CD580 /* LyGiaQuyenNotes */;
+			targetProxy = B548B0232A4307EB002CD580 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B548B02A2A4307EB002CD580 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B548B02B2A4307EB002CD580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		B548B02D2A4307EB002CD580 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LyGiaQuyenNotes/LyGiaQuyenNotes.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LyGiaQuyenNotes/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LyGiaQuyen.LyGiaQuyenNotes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B548B02E2A4307EB002CD580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LyGiaQuyenNotes/LyGiaQuyenNotes.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LyGiaQuyenNotes/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LyGiaQuyen.LyGiaQuyenNotes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B548B0302A4307EB002CD580 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LyGiaQuyen.LyGiaQuyenNotesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LyGiaQuyenNotes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LyGiaQuyenNotes";
+			};
+			name = Debug;
+		};
+		B548B0312A4307EB002CD580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LyGiaQuyen.LyGiaQuyenNotesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LyGiaQuyenNotes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LyGiaQuyenNotes";
+			};
+			name = Release;
+		};
+		B548B0332A4307EB002CD580 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LyGiaQuyen.LyGiaQuyenNotesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LyGiaQuyenNotes;
+			};
+			name = Debug;
+		};
+		B548B0342A4307EB002CD580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LyGiaQuyen.LyGiaQuyenNotesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LyGiaQuyenNotes;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B548B0022A4307E9002CD580 /* Build configuration list for PBXProject "LyGiaQuyenNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B548B02A2A4307EB002CD580 /* Debug */,
+				B548B02B2A4307EB002CD580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B548B02C2A4307EB002CD580 /* Build configuration list for PBXNativeTarget "LyGiaQuyenNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B548B02D2A4307EB002CD580 /* Debug */,
+				B548B02E2A4307EB002CD580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B548B02F2A4307EB002CD580 /* Build configuration list for PBXNativeTarget "LyGiaQuyenNotesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B548B0302A4307EB002CD580 /* Debug */,
+				B548B0312A4307EB002CD580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B548B0322A4307EB002CD580 /* Build configuration list for PBXNativeTarget "LyGiaQuyenNotesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B548B0332A4307EB002CD580 /* Debug */,
+				B548B0342A4307EB002CD580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B548AFFF2A4307E9002CD580 /* Project object */;
+}
