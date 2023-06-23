@@ -7,7 +7,7 @@
 
 import Foundation
 import Firebase
-class AppRouter: ObservableObject {
+@MainActor class AppRouter: BaseObservableObject {
     @Published var state: AppState = .splash
     @Published var isSignIn: Bool = false
     func checkIfUserIsSignedIn() {

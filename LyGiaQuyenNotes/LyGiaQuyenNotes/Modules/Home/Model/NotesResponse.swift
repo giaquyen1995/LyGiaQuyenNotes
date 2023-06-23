@@ -36,40 +36,40 @@ public struct NoteResponse: Codable {
     
     public static func parse(usersData:[String: Any], isGetAll:Bool) -> NoteResponse? {
         var response:NoteResponse?
-            if isGetAll {
-                var notes: [Note] = []
-                let excludeUserId = FireBaseManager.shared.userId
-                for (userId, userData) in usersData {
-                    
-                    guard userId != excludeUserId,
-                          let userData = userData as? [String: Any],
-                          let notesData = userData["notes"] as? [String: Any] else {
+        if isGetAll {
+            var notes: [Note] = []
+            let excludeUserId = FireBaseManager.shared.userId
+            for (userId, userData) in usersData {
+                
+                guard userId != excludeUserId,
+                      let userData = userData as? [String: Any],
+                      let notesData = userData["notes"] as? [String: Any] else {
+                    continue
+                }
+                
+                for (noteId, noteData) in notesData {
+                    guard let note = parseNoteData(noteId: noteId, noteData: noteData) else {
                         continue
                     }
                     
-                    for (noteId, noteData) in notesData {
-                        guard let note = parseNoteData(noteId: noteId, noteData: noteData) else {
-                            continue
-                        }
-                        
-                        notes.append(note)
-                    }
+                    notes.append(note)
                 }
-                response = NoteResponse(userId: "", notes: notes)
-                
-            } else {
-                
-                var notes: [Note] = []
-                   for (noteId, noteData) in usersData {
-                       guard let note = parseNoteData(noteId: noteId, noteData: noteData) else {
-                           continue
-                       }
-                       notes.append(note)
-                   }
-                
-                response = NoteResponse(userId: "", notes: notes)
             }
-            return response
+            response = NoteResponse(userId: "", notes: notes)
+            
+        } else {
+            
+            var notes: [Note] = []
+            for (noteId, noteData) in usersData {
+                guard let note = parseNoteData(noteId: noteId, noteData: noteData) else {
+                    continue
+                }
+                notes.append(note)
+            }
+            
+            response = NoteResponse(userId: "", notes: notes)
+        }
+        return response
     }
     
 }
@@ -105,5 +105,5 @@ public struct Note: Codable, Identifiable {
         date = try container.decode(String.self, forKey: .date)
         user = try container.decode(String.self, forKey: .user)
     }
-   
+    
 }

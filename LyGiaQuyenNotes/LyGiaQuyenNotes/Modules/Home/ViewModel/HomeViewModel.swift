@@ -14,7 +14,7 @@ import Firebase
     @Published var myNotes:[Note] = []
     @Published var othersNotes:[Note] = []
     @Published var isLoading: Bool = false
-   
+    
     func fetchNotes() {
         self.isLoading = true
         let task =  Task {
@@ -48,6 +48,6 @@ import Firebase
         }
         addTasks([task])
     }
- 
+    
     
 }

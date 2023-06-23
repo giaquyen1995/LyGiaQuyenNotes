@@ -20,7 +20,7 @@ struct RegisterView: View {
     @State private var confirmPassword: String = ""
     @State private var showAlert = false
     @State private var isLoading = false
-
+    
     var btnBack : some View {
         Button(action: {
             self.presentationMode.wrappedValue.dismiss()

@@ -13,7 +13,7 @@ public enum ApiError: Error {
     case invalidObject
     
     case invalidMethod
-
+    
     case errors(object:[String:Any])
     
     // Throw in all other cases
@@ -23,7 +23,7 @@ public enum ApiError: Error {
     
     case ignoreError
     
-  
+    
     public func getErrorObject() -> [String:Any]? {
         if case let .errors(error) = self {
             return error

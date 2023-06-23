@@ -18,14 +18,12 @@ import Combine
                 guard let user = Auth.auth().currentUser else { return }
                 let userID = user.uid
                 let email = user.email ?? ""
-
+                
                 let key = FireBaseManager.shared.ref.child("users").child(userID).child("notes").childByAutoId().key ?? ""
                 let newNoteWithID = Note(id: key, title: title, content: content, date: date, user: email)
                 try await API.createNote(note: newNoteWithID, userId: userID, noteId: key)
                 self.isSucess = true
-
-            
-            }catch {
+            } catch {
                 self.isSucess = false
             }
         }
@@ -40,12 +38,11 @@ import Combine
                 guard let user = Auth.auth().currentUser else { return }
                 let userID = user.uid
                 let email = user.email ?? ""
-
+                
                 let newNoteWithID = Note(id: id, title: title, content: content, date: date, user: userID)
                 try await API.createNote(note: newNoteWithID, userId: email, noteId: id)
-                    self.isSucess = true
-
-            }catch {
+                self.isSucess = true
+            } catch {
                 self.isSucess = false
             }
         }

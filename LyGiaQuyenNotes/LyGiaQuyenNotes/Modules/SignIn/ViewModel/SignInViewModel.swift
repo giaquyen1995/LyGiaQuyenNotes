@@ -13,7 +13,7 @@ import Combine
     @Published var error: Error?
     @Published var isSignin = false
     @Published var isLoading = false
-
+    
     func signin(email: String, password: String)  {
         isLoading = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {

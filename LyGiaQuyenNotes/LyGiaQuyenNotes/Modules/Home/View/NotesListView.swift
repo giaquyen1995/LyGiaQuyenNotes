@@ -31,9 +31,9 @@ struct NotesListView: View {
         } .background(
             NavigationLink(
                 destination: CreateNoteView(note: selectedNote, isEditable: !useOtherNotes),
-                       isActive: Binding<Bool>(get: { selectedNote != nil }, set: { _ in selectedNote = nil }),
-                       label: { EmptyView() }
-                   )
+                isActive: Binding<Bool>(get: { selectedNote != nil }, set: { _ in selectedNote = nil }),
+                label: { EmptyView() }
+            )
             .hidden()
         )
     }

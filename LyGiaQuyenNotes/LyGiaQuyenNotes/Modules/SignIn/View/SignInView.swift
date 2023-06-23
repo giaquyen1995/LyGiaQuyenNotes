@@ -70,7 +70,7 @@ struct SignInView: View {
                 }
             }
         }
-        .accessibilityIdentifier("signinScreenElement")
-
+        .accessibilityIdentifier("signinScreenElement") // for unit test
+        
     }
 }

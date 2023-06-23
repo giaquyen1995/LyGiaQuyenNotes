@@ -39,6 +39,6 @@ struct LyGiaQuyenNotesApp: App {
     var body: some Scene {
         WindowGroup {
             rootView
-                .environmentObject(appRouter)        }
+            .environmentObject(appRouter)        }
     }
 }

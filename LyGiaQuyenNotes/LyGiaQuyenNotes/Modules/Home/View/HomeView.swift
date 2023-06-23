@@ -56,8 +56,8 @@ struct HomeView: View {
         .onReceive(NotificationCenter.default.publisher(for: .didCreateNote)) { _ in viewModel.fetchNotes() }
         .onReceive(viewModel.$isSignout) { appRouter.state = $0 ? .signin : appRouter.state }
         .onReceive(viewModel.$isLoading) { isLoading = $0 }
-        .accessibilityIdentifier("homeScreenElement")
-
+        .accessibilityIdentifier("homeScreenElement") // for unit test 
+        
     }
 }
 
