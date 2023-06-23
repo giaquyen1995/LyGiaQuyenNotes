@@ -14,6 +14,36 @@
 		B548B01D2A4307EB002CD580 /* LyGiaQuyenNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B548B01C2A4307EB002CD580 /* LyGiaQuyenNotesTests.swift */; };
 		B548B0272A4307EB002CD580 /* LyGiaQuyenNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B548B0262A4307EB002CD580 /* LyGiaQuyenNotesUITests.swift */; };
 		B548B0292A4307EB002CD580 /* LyGiaQuyenNotesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B548B0282A4307EB002CD580 /* LyGiaQuyenNotesUITestsLaunchTests.swift */; };
+		B56663332A44993A007FA9DA /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663322A44993A007FA9DA /* Color+Extension.swift */; };
+		B56663352A449953007FA9DA /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663342A449953007FA9DA /* Date+Extension.swift */; };
+		B56663372A44996F007FA9DA /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663362A44996F007FA9DA /* String+Extension.swift */; };
+		B56663392A4499AE007FA9DA /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663382A4499AE007FA9DA /* Notification+Extension.swift */; };
+		B566633C2A4499D0007FA9DA /* BaseObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566633B2A4499D0007FA9DA /* BaseObservableObject.swift */; };
+		B566633F2A4499F8007FA9DA /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566633E2A4499F8007FA9DA /* FireBaseManager.swift */; };
+		B56663432A449A2A007FA9DA /* ProgressIndicatior.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663422A449A2A007FA9DA /* ProgressIndicatior.swift */; };
+		B56663462A449A44007FA9DA /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663452A449A44007FA9DA /* TextFieldView.swift */; };
+		B56663492A449A5B007FA9DA /* SecureTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663482A449A5B007FA9DA /* SecureTextFieldView.swift */; };
+		B566634C2A449A75007FA9DA /* AlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566634B2A449A75007FA9DA /* AlertModifier.swift */; };
+		B56663542A449AF1007FA9DA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663532A449AF1007FA9DA /* HomeViewModel.swift */; };
+		B56663562A449B09007FA9DA /* NotesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663552A449B09007FA9DA /* NotesResponse.swift */; };
+		B56663582A449B21007FA9DA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663572A449B21007FA9DA /* HomeView.swift */; };
+		B566635A2A449B68007FA9DA /* NotesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663592A449B68007FA9DA /* NotesListView.swift */; };
+		B566635E2A449BAA007FA9DA /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566635D2A449BAA007FA9DA /* SplashView.swift */; };
+		B56663622A449BDF007FA9DA /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663612A449BDF007FA9DA /* AppRouter.swift */; };
+		B56663672A449C25007FA9DA /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663662A449C25007FA9DA /* SignInView.swift */; };
+		B56663692A449C44007FA9DA /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663682A449C44007FA9DA /* SignInViewModel.swift */; };
+		B566636E2A449C80007FA9DA /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566636D2A449C80007FA9DA /* RegisterView.swift */; };
+		B56663702A449CA9007FA9DA /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566636F2A449CA9007FA9DA /* RegisterViewModel.swift */; };
+		B56663742A449CF9007FA9DA /* Api+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663732A449CF9007FA9DA /* Api+Extension.swift */; };
+		B566637D2A449D81007FA9DA /* FibaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566637C2A449D81007FA9DA /* FibaseAPI.swift */; };
+		B56663802A449DA2007FA9DA /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566637F2A449DA2007FA9DA /* Api.swift */; };
+		B56663822A449DB6007FA9DA /* APIAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663812A449DB6007FA9DA /* APIAddress.swift */; };
+		B56663852A449DDA007FA9DA /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663842A449DDA007FA9DA /* APIError.swift */; };
+		B56663872A449EC8007FA9DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B56663862A449EC8007FA9DA /* GoogleService-Info.plist */; };
+		B566638A2A449F72007FA9DA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B56663892A449F72007FA9DA /* FirebaseAuth */; };
+		B566638C2A449F72007FA9DA /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B566638B2A449F72007FA9DA /* FirebaseDatabase */; };
+		B56663912A44A017007FA9DA /* CreateNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663902A44A017007FA9DA /* CreateNoteViewModel.swift */; };
+		B56663932A44A033007FA9DA /* CreateNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663922A44A033007FA9DA /* CreateNoteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +75,34 @@
 		B548B0222A4307EB002CD580 /* LyGiaQuyenNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyGiaQuyenNotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B548B0262A4307EB002CD580 /* LyGiaQuyenNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyGiaQuyenNotesUITests.swift; sourceTree = "<group>"; };
 		B548B0282A4307EB002CD580 /* LyGiaQuyenNotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyGiaQuyenNotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B56663322A44993A007FA9DA /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		B56663342A449953007FA9DA /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		B56663362A44996F007FA9DA /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		B56663382A4499AE007FA9DA /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
+		B566633B2A4499D0007FA9DA /* BaseObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseObservableObject.swift; sourceTree = "<group>"; };
+		B566633E2A4499F8007FA9DA /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
+		B56663422A449A2A007FA9DA /* ProgressIndicatior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatior.swift; sourceTree = "<group>"; };
+		B56663452A449A44007FA9DA /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		B56663482A449A5B007FA9DA /* SecureTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextFieldView.swift; sourceTree = "<group>"; };
+		B566634B2A449A75007FA9DA /* AlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModifier.swift; sourceTree = "<group>"; };
+		B56663532A449AF1007FA9DA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B56663552A449B09007FA9DA /* NotesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesResponse.swift; sourceTree = "<group>"; };
+		B56663572A449B21007FA9DA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B56663592A449B68007FA9DA /* NotesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListView.swift; sourceTree = "<group>"; };
+		B566635D2A449BAA007FA9DA /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		B56663612A449BDF007FA9DA /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		B56663662A449C25007FA9DA /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		B56663682A449C44007FA9DA /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		B566636D2A449C80007FA9DA /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		B566636F2A449CA9007FA9DA /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		B56663732A449CF9007FA9DA /* Api+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Extension.swift"; sourceTree = "<group>"; };
+		B566637C2A449D81007FA9DA /* FibaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibaseAPI.swift; sourceTree = "<group>"; };
+		B566637F2A449DA2007FA9DA /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		B56663812A449DB6007FA9DA /* APIAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAddress.swift; sourceTree = "<group>"; };
+		B56663842A449DDA007FA9DA /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		B56663862A449EC8007FA9DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B56663902A44A017007FA9DA /* CreateNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteViewModel.swift; sourceTree = "<group>"; };
+		B56663922A44A033007FA9DA /* CreateNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B566638C2A449F72007FA9DA /* FirebaseDatabase in Frameworks */,
+				B566638A2A449F72007FA9DA /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +155,13 @@
 		B548B0092A4307E9002CD580 /* LyGiaQuyenNotes */ = {
 			isa = PBXGroup;
 			children = (
-				B548B00A2A4307E9002CD580 /* LyGiaQuyenNotesApp.swift */,
+				B56663862A449EC8007FA9DA /* GoogleService-Info.plist */,
+				B56663712A449CD3007FA9DA /* Api */,
+				B566634D2A449A90007FA9DA /* Modules */,
+				B56663402A449A15007FA9DA /* Component */,
+				B566633D2A4499E2007FA9DA /* Share */,
+				B566633A2A4499BB007FA9DA /* Base */,
+				B56663312A449902007FA9DA /* Extension */,
 				B548B00C2A4307E9002CD580 /* ContentView.swift */,
 				B548B00E2A4307EB002CD580 /* Assets.xcassets */,
 				B548B0102A4307EB002CD580 /* LyGiaQuyenNotes.entitlements */,
@@ -129,6 +195,276 @@
 			path = LyGiaQuyenNotesUITests;
 			sourceTree = "<group>";
 		};
+		B56663312A449902007FA9DA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B56663322A44993A007FA9DA /* Color+Extension.swift */,
+				B56663342A449953007FA9DA /* Date+Extension.swift */,
+				B56663362A44996F007FA9DA /* String+Extension.swift */,
+				B56663382A4499AE007FA9DA /* Notification+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B566633A2A4499BB007FA9DA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B566633B2A4499D0007FA9DA /* BaseObservableObject.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B566633D2A4499E2007FA9DA /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				B566633E2A4499F8007FA9DA /* FireBaseManager.swift */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
+		B56663402A449A15007FA9DA /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				B566634A2A449A6F007FA9DA /* AlertModifier */,
+				B56663472A449A50007FA9DA /* SecureTextFieldView */,
+				B56663442A449A3E007FA9DA /* TextFieldView */,
+				B56663412A449A22007FA9DA /* ProgressIndicatior */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		B56663412A449A22007FA9DA /* ProgressIndicatior */ = {
+			isa = PBXGroup;
+			children = (
+				B56663422A449A2A007FA9DA /* ProgressIndicatior.swift */,
+			);
+			path = ProgressIndicatior;
+			sourceTree = "<group>";
+		};
+		B56663442A449A3E007FA9DA /* TextFieldView */ = {
+			isa = PBXGroup;
+			children = (
+				B56663452A449A44007FA9DA /* TextFieldView.swift */,
+			);
+			path = TextFieldView;
+			sourceTree = "<group>";
+		};
+		B56663472A449A50007FA9DA /* SecureTextFieldView */ = {
+			isa = PBXGroup;
+			children = (
+				B56663482A449A5B007FA9DA /* SecureTextFieldView.swift */,
+			);
+			path = SecureTextFieldView;
+			sourceTree = "<group>";
+		};
+		B566634A2A449A6F007FA9DA /* AlertModifier */ = {
+			isa = PBXGroup;
+			children = (
+				B566634B2A449A75007FA9DA /* AlertModifier.swift */,
+			);
+			path = AlertModifier;
+			sourceTree = "<group>";
+		};
+		B566634D2A449A90007FA9DA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B566638D2A449FF8007FA9DA /* CreateNote */,
+				B566636A2A449C63007FA9DA /* Register */,
+				B56663632A449BF6007FA9DA /* SignIn */,
+				B566635B2A449B8C007FA9DA /* Splash */,
+				B566634F2A449ACF007FA9DA /* Home */,
+				B566634E2A449A98007FA9DA /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B566634E2A449A98007FA9DA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B56663602A449BD2007FA9DA /* ViewModel */,
+				B566635F2A449BCB007FA9DA /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B566634F2A449ACF007FA9DA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B56663522A449AE0007FA9DA /* ViewModel */,
+				B56663512A449ADA007FA9DA /* Model */,
+				B56663502A449AD6007FA9DA /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B56663502A449AD6007FA9DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B56663572A449B21007FA9DA /* HomeView.swift */,
+				B56663592A449B68007FA9DA /* NotesListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B56663512A449ADA007FA9DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B56663552A449B09007FA9DA /* NotesResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B56663522A449AE0007FA9DA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B56663532A449AF1007FA9DA /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B566635B2A449B8C007FA9DA /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				B566635C2A449B98007FA9DA /* View */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		B566635C2A449B98007FA9DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B566635D2A449BAA007FA9DA /* SplashView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B566635F2A449BCB007FA9DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B548B00A2A4307E9002CD580 /* LyGiaQuyenNotesApp.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B56663602A449BD2007FA9DA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B56663612A449BDF007FA9DA /* AppRouter.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B56663632A449BF6007FA9DA /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				B56663652A449C0E007FA9DA /* ViewModel */,
+				B56663642A449C08007FA9DA /* View */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		B56663642A449C08007FA9DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B56663662A449C25007FA9DA /* SignInView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B56663652A449C0E007FA9DA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B56663682A449C44007FA9DA /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B566636A2A449C63007FA9DA /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				B566636C2A449C6C007FA9DA /* ViewModel */,
+				B566636B2A449C69007FA9DA /* View */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		B566636B2A449C69007FA9DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B566636D2A449C80007FA9DA /* RegisterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B566636C2A449C6C007FA9DA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B566636F2A449CA9007FA9DA /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B56663712A449CD3007FA9DA /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				B566637E2A449D90007FA9DA /* ApiBase */,
+				B566637B2A449D76007FA9DA /* ApiService */,
+				B56663722A449CDC007FA9DA /* Extension */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		B56663722A449CDC007FA9DA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B56663732A449CF9007FA9DA /* Api+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B566637B2A449D76007FA9DA /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				B566637C2A449D81007FA9DA /* FibaseAPI.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		B566637E2A449D90007FA9DA /* ApiBase */ = {
+			isa = PBXGroup;
+			children = (
+				B566637F2A449DA2007FA9DA /* Api.swift */,
+				B56663812A449DB6007FA9DA /* APIAddress.swift */,
+				B56663842A449DDA007FA9DA /* APIError.swift */,
+			);
+			path = ApiBase;
+			sourceTree = "<group>";
+		};
+		B566638D2A449FF8007FA9DA /* CreateNote */ = {
+			isa = PBXGroup;
+			children = (
+				B566638F2A44A007007FA9DA /* ViewModel */,
+				B566638E2A44A004007FA9DA /* View */,
+			);
+			path = CreateNote;
+			sourceTree = "<group>";
+		};
+		B566638E2A44A004007FA9DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B56663922A44A033007FA9DA /* CreateNoteView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B566638F2A44A007007FA9DA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B56663902A44A017007FA9DA /* CreateNoteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +481,10 @@
 			dependencies = (
 			);
 			name = LyGiaQuyenNotes;
+			packageProductDependencies = (
+				B56663892A449F72007FA9DA /* FirebaseAuth */,
+				B566638B2A449F72007FA9DA /* FirebaseDatabase */,
+			);
 			productName = LyGiaQuyenNotes;
 			productReference = B548B0072A4307E9002CD580 /* LyGiaQuyenNotes.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +557,9 @@
 				Base,
 			);
 			mainGroup = B548AFFE2A4307E9002CD580;
+			packageReferences = (
+				B56663882A449F72007FA9DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = B548B0082A4307E9002CD580 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +577,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B548B0132A4307EB002CD580 /* Preview Assets.xcassets in Resources */,
+				B56663872A449EC8007FA9DA /* GoogleService-Info.plist in Resources */,
 				B548B00F2A4307EB002CD580 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +603,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B56663912A44A017007FA9DA /* CreateNoteViewModel.swift in Sources */,
+				B56663562A449B09007FA9DA /* NotesResponse.swift in Sources */,
 				B548B00D2A4307E9002CD580 /* ContentView.swift in Sources */,
+				B566635E2A449BAA007FA9DA /* SplashView.swift in Sources */,
+				B566634C2A449A75007FA9DA /* AlertModifier.swift in Sources */,
+				B56663692A449C44007FA9DA /* SignInViewModel.swift in Sources */,
+				B56663352A449953007FA9DA /* Date+Extension.swift in Sources */,
+				B56663392A4499AE007FA9DA /* Notification+Extension.swift in Sources */,
+				B56663582A449B21007FA9DA /* HomeView.swift in Sources */,
+				B566637D2A449D81007FA9DA /* FibaseAPI.swift in Sources */,
+				B56663802A449DA2007FA9DA /* Api.swift in Sources */,
+				B56663332A44993A007FA9DA /* Color+Extension.swift in Sources */,
+				B566633F2A4499F8007FA9DA /* FireBaseManager.swift in Sources */,
+				B566636E2A449C80007FA9DA /* RegisterView.swift in Sources */,
+				B566633C2A4499D0007FA9DA /* BaseObservableObject.swift in Sources */,
+				B56663672A449C25007FA9DA /* SignInView.swift in Sources */,
+				B56663492A449A5B007FA9DA /* SecureTextFieldView.swift in Sources */,
+				B56663542A449AF1007FA9DA /* HomeViewModel.swift in Sources */,
+				B56663702A449CA9007FA9DA /* RegisterViewModel.swift in Sources */,
+				B56663932A44A033007FA9DA /* CreateNoteView.swift in Sources */,
+				B56663462A449A44007FA9DA /* TextFieldView.swift in Sources */,
+				B56663822A449DB6007FA9DA /* APIAddress.swift in Sources */,
+				B56663372A44996F007FA9DA /* String+Extension.swift in Sources */,
+				B56663622A449BDF007FA9DA /* AppRouter.swift in Sources */,
 				B548B00B2A4307E9002CD580 /* LyGiaQuyenNotesApp.swift in Sources */,
+				B56663852A449DDA007FA9DA /* APIError.swift in Sources */,
+				B56663742A449CF9007FA9DA /* Api+Extension.swift in Sources */,
+				B566635A2A449B68007FA9DA /* NotesListView.swift in Sources */,
+				B56663432A449A2A007FA9DA /* ProgressIndicatior.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +979,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B56663882A449F72007FA9DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B56663892A449F72007FA9DA /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B56663882A449F72007FA9DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		B566638B2A449F72007FA9DA /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B56663882A449F72007FA9DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B548AFFF2A4307E9002CD580 /* Project object */;
 }
