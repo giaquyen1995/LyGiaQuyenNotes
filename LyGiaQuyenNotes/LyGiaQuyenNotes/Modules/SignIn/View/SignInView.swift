@@ -70,5 +70,7 @@ struct SignInView: View {
                 }
             }
         }
+        .accessibilityIdentifier("signinScreenElement")
+
     }
 }

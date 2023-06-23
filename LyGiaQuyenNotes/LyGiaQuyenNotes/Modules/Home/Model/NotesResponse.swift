@@ -36,7 +36,6 @@ public struct NoteResponse: Codable {
     
     public static func parse(usersData:[String: Any], isGetAll:Bool) -> NoteResponse? {
         var response:NoteResponse?
-        do {
             if isGetAll {
                 var notes: [Note] = []
                 let excludeUserId = FireBaseManager.shared.userId
@@ -71,10 +70,6 @@ public struct NoteResponse: Codable {
                 response = NoteResponse(userId: "", notes: notes)
             }
             return response
-        }
-        catch  {
-            return NoteResponse(userId: "", notes: [])
-        }
     }
     
 }

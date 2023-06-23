@@ -7,16 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3028F4BB-BFAD-4BD5-A31F-6B3B9B88F4E3"
+            uuid = "90E5B0A8-F556-4529-92A1-34CFAA578FAF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LyGiaQuyenNotes/Modules/Main/ViewModel/AppRouter.swift"
+            filePath = "LyGiaQuyenNotesUITests/LyGiaQuyenNotesUITests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "checkIfUserIsSignedIn()"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "testSignup()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "72DF9232-1F83-4273-8CDC-68F232452FB4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LyGiaQuyenNotesUITests/LyGiaQuyenNotesUITests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "testSignup()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

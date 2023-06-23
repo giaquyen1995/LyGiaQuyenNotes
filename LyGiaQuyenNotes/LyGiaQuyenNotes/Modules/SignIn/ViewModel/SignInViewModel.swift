@@ -16,7 +16,7 @@ import Combine
 
     func signin(email: String, password: String)  {
         isLoading = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             let task = Task {
                 do {
                     let authResult = try await API.signIn(email: email, password: password)
