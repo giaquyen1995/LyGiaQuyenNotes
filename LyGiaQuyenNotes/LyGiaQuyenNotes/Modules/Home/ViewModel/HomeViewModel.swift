@@ -11,18 +11,18 @@ import Firebase
 
 @MainActor class HomeViewModel: BaseObservableObject {
     @Published var isSignout: Bool = false
-    @Published var notes:[Note] = []
-    @Published var notesOthers:[Note] = []
+    @Published var myNotes:[Note] = []
+    @Published var othersNotes:[Note] = []
     @Published var isLoading: Bool = false
    
     func fetchNotes() {
         self.isLoading = true
         let task =  Task {
             do {
-                let notes = try await API.getMyNotes(forUser: FireBaseManager.shared.userId)
-                let notesOthers = try await API.getOthersNotes()
-                self.notes = notes.sorted(by: { $0.date > $1.date })
-                self.notesOthers = notesOthers.sorted(by: { $0.date > $1.date })
+                let myNotes = try await API.getMyNotes(forUser: FireBaseManager.shared.userId)
+                let othersNotes = try await API.getOthersNotes()
+                self.myNotes = myNotes.sorted(by: { $0.date > $1.date })
+                self.othersNotes = othersNotes.sorted(by: { $0.date > $1.date })
                 self.isLoading = false
                 
             } catch {
@@ -38,8 +38,8 @@ import Firebase
         let task = Task {
             do{
                 try Auth.auth().signOut()
-                self.notes = []
-                self.notesOthers = []
+                self.myNotes = []
+                self.othersNotes = []
                 self.isSignout = true
                 
             } catch let signOutError as NSError {

@@ -23,14 +23,14 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             TabView(selection: $selection) {
-                NotesListView(useOtherNotes: false, notes: viewModel.notes)
+                NotesListView(useOtherNotes: false, notes: viewModel.myNotes)
                     .tabItem {
                         Label("My Notes", systemImage: "1.square.fill")
                     }
                     .tag(0)
                     .environmentObject(viewModel)
                 
-                NotesListView(useOtherNotes: true, notes: viewModel.notesOthers)
+                NotesListView(useOtherNotes: true, notes: viewModel.othersNotes)
                     .tabItem {
                         Label("Other's Notes", systemImage: "2.square.fill")
                     }
