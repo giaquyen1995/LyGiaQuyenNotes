@@ -9,14 +9,14 @@ import Foundation
 import Firebase
 class AppRouter: ObservableObject {
     @Published var state: AppState = .splash
-    @Published var isLoggedIn: Bool = false
+    @Published var isSignIn: Bool = false
     func checkIfUserIsSignedIn() {
         if Auth.auth().currentUser != nil {
             self.state = .home
-            isLoggedIn = true
+            isSignIn = true
         } else {
             self.state = .signin
-            isLoggedIn = false
+            isSignIn = false
         }
     }
 }

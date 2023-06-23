@@ -6,24 +6,63 @@
 //
 
 import SwiftUI
-
 struct HomeView: View {
     @EnvironmentObject var appRouter: AppRouter
-    @State private var selection = 0
-    @State private var selectedNote: Note? = nil
-    @StateObject var viewModel: HomeViewModel = HomeViewModel()
+    @StateObject var viewModel = HomeViewModel()
+    
     @State private var showingAlert = false
     @State private var isLoading = false
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    @State private var selection = 0
+    @State private var selectedNote: Note? = nil
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor.white
     }
     
+    var body: some View {
+        NavigationView {
+            TabView(selection: $selection) {
+                NotesListView(useOtherNotes: false, notes: viewModel.notes)
+                    .tabItem {
+                        Label("My Notes", systemImage: "1.square.fill")
+                    }
+                    .tag(0)
+                    .environmentObject(viewModel)
+                
+                NotesListView(useOtherNotes: true, notes: viewModel.notesOthers)
+                    .tabItem {
+                        Label("Other's Notes", systemImage: "2.square.fill")
+                    }
+                    .tag(1)
+                    .environmentObject(viewModel)
+            }
+            .accentColor(.blue)
+            .navigationBarItems(leading: profileButton, trailing: createNoteButton)
+            .modifier(AlertModifier(showAlert: $showingAlert,
+                                    title: "Sign out",
+                                    message: "Are you sure?",
+                                    confirmButtonText: "Sign out",
+                                    onConfirm: { Task {
+                viewModel.signOut()
+            }}))
+            
+        }
+        .overlay(isLoading ? ProgressIndicatior() : nil)
+        .onReceive(appRouter.$isSignIn) { isSignIn in
+            if isSignIn {
+                viewModel.fetchNotes()
+            }}
+        .onReceive(NotificationCenter.default.publisher(for: .didCreateNote)) { _ in viewModel.fetchNotes() }
+        .onReceive(viewModel.$isSignout) { appRouter.state = $0 ? .signin : appRouter.state }
+        .onReceive(viewModel.$isLoading) { isLoading = $0 }
+    }
+}
+
+// MARK: - Computed Properties
+private extension HomeView {
     var profileButton: some View {
-        Button(action: {
-            showingAlert = true
-        }) {
+        Button(action: { showingAlert = true }) {
             HStack {
                 Image(systemName: "person.circle")
                     .resizable()
@@ -41,46 +80,5 @@ struct HomeView: View {
             Image(systemName: "plus")
         }
     }
-    
-    var body: some View {
-        NavigationView {
-            TabView(selection: $selection) {
-                NotesListView(useOtherNotes: false, notes: viewModel.notes)
-                    .tabItem {
-                        Label("My Notes", systemImage: "1.square.fill")
-                    }
-                    .tag(0)
-                    .environmentObject(viewModel)
-                    .navigationBarTitle("Notes", displayMode: .automatic)
-                
-                NotesListView(useOtherNotes: true, notes: viewModel.notesOthers)
-                    .tabItem {
-                        Label("Other's Notes", systemImage: "2.square.fill")
-                    }
-                    .tag(1)
-                    .environmentObject(viewModel)
-                    .navigationBarTitle("Notes", displayMode: .automatic)
-            }
-            .accentColor(Color.blue)
-            .modifier(AlertModifier(showAlert: $showingAlert, title: "Sign out", message: "Are you sure?", confirmButtonText: "Sign out", onConfirm: viewModel.signOut))
-            .navigationBarItems(leading: profileButton, trailing: createNoteButton)
-            .onReceive(appRouter.$isLoggedIn) { isLoggedIn in
-                if isLoggedIn {
-                    viewModel.fetchNotes()
-                }
-            }
-            .onReceive(NotificationCenter.default.publisher(for: .didCreateNote)) { _ in
-                viewModel.fetchNotes()
-            }
-        }
-        .overlay(isLoading ? ProgressIndicatior() : nil)
-        .onReceive(viewModel.$isSignout) { isSignout in
-            if isSignout {
-                appRouter.state = .signin
-            }
-        }
-        .onReceive(viewModel.$isLoading) { isLoading in
-            self.isLoading = isLoading
-        }
-    }
 }
+

@@ -54,13 +54,14 @@ struct SignInView: View {
                 Spacer()
             }
             .padding()
+            .overlay(viewModel.isLoading ? ProgressIndicatior() : nil)
             .alert(isPresented: $showAlert) {
                 Alert(title: Text("Error"), message: Text("\(viewModel.error?.localizedDescription ?? "Unknown error")"), dismissButton: .default(Text("OK")))
             }
             .onReceive(viewModel.$isSignin) { isSignin in
                 if isSignin {
                     appRouter.state = .home
-                    appRouter.isLoggedIn = true
+                    appRouter.isSignIn = true
                 }
             }
             .onReceive(viewModel.$error) { error in

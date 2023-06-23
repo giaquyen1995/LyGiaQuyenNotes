@@ -8,7 +8,7 @@
 import Foundation
 import Firebase
 import Combine
-class CreateNoteViewModel: BaseObservableObject {
+@MainActor class CreateNoteViewModel: BaseObservableObject {
     @Published var isSucess = false
     
     func createNote(title:String, content:String, date:String)  {
@@ -22,12 +22,11 @@ class CreateNoteViewModel: BaseObservableObject {
                 let key = FireBaseManager.shared.ref.child("users").child(userID).child("notes").childByAutoId().key ?? ""
                 let newNoteWithID = Note(id: key, title: title, content: content, date: date, user: email)
                 try await API.createNote(note: newNoteWithID, userId: userID, noteId: key)
-                await MainActor.run(body: {
-                    self.isSucess = true
+                self.isSucess = true
 
-                })
+            
             }catch {
-                
+                self.isSucess = false
             }
         }
         addTasks([task])
@@ -44,12 +43,10 @@ class CreateNoteViewModel: BaseObservableObject {
 
                 let newNoteWithID = Note(id: id, title: title, content: content, date: date, user: userID)
                 try await API.createNote(note: newNoteWithID, userId: email, noteId: id)
-                await MainActor.run(body: {
                     self.isSucess = true
 
-                })
             }catch {
-                
+                self.isSucess = false
             }
         }
         addTasks([task])

@@ -70,11 +70,10 @@ struct RegisterView: View {
             Alert(title: Text("Error"), message: Text("\(registerViewModel.error?.localizedDescription ?? "Unknown error")"), dismissButton: .default(Text("OK")))
         }
         .overlay(isLoading ? ProgressIndicatior() : nil)
-
         .onReceive(registerViewModel.$isRegistered) { isRegistered in
             if isRegistered {
                 appRouter.state = .home
-                appRouter.isLoggedIn = true
+                appRouter.isSignIn = true
                 
             }
         }

@@ -16,10 +16,7 @@ import Firebase
     @Published var isLoading: Bool = false
    
     func fetchNotes() {
-        print("call api ")
-
         self.isLoading = true
-        
         let task =  Task {
             do {
                 let notes = try await API.getMyNotes(forUser: FireBaseManager.shared.userId)
@@ -51,6 +48,6 @@ import Firebase
         }
         addTasks([task])
     }
-    
+ 
     
 }

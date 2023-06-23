@@ -31,11 +31,9 @@ struct CreateNoteView: View {
                 let noteTitle = String(noteParts.first ?? "")
                 let noteContent = noteParts.count > 1 ? String(noteParts[1]) : ""
                 
-                print("Create note with title \(noteTitle) and content \(noteContent)")
                 if let existingNote = note {
                     viewModel.updateNote(id: existingNote.id, title: noteTitle, content: noteContent, date: Date().toString(format: "yyyy-MM-dd'T'HH:mm:ss"))
                 } else {
-                    print("data format: \(Date().toString(format: "yyyy-MM-dd'T'HH:mm:ss"))")
                     viewModel.createNote(title: noteTitle, content: noteContent, date: Date().toString(format: "yyyy-MM-dd'T'HH:mm:ss"))
                 }
             } : nil )

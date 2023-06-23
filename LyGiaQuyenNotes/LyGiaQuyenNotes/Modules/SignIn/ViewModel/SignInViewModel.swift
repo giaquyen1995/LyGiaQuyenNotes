@@ -9,28 +9,30 @@ import Foundation
 import FirebaseAuth
 import Combine
 
-class SignInViewModel: BaseObservableObject {
+@MainActor class SignInViewModel: BaseObservableObject {
     @Published var error: Error?
     @Published var isSignin = false
-    
+    @Published var isLoading = false
+
     func signin(email: String, password: String)  {
-        let task = Task {
-            do {
-                let authResult = try await API.signIn(email: email, password: password)
-                DispatchQueue.main.async {
-                               self.error = nil
-                               self.isSignin = true
-                           }
-                print("User signed in: \(authResult.user.uid)")
-            } catch {
-                DispatchQueue.main.async {
-                                self.error = error
-                                self.isSignin = false
-                            }
+        isLoading = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            let task = Task {
+                do {
+                    let authResult = try await API.signIn(email: email, password: password)
+                    self.error = nil
+                    self.isSignin = true
+                    self.isLoading = false
+                    print("User signed in: \(authResult.user.uid)")
+                } catch {
+                    self.error = error
+                    self.isSignin = false
+                    self.isLoading = false
+                    
+                }
             }
+            self.addTasks([task])
         }
-        addTasks([task])
-        
     }
     
 }
