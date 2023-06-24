@@ -35,7 +35,7 @@
 		B566636E2A449C80007FA9DA /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566636D2A449C80007FA9DA /* RegisterView.swift */; };
 		B56663702A449CA9007FA9DA /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566636F2A449CA9007FA9DA /* RegisterViewModel.swift */; };
 		B56663742A449CF9007FA9DA /* Api+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663732A449CF9007FA9DA /* Api+Extension.swift */; };
-		B566637D2A449D81007FA9DA /* FibaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566637C2A449D81007FA9DA /* FibaseAPI.swift */; };
+		B566637D2A449D81007FA9DA /* FirebaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566637C2A449D81007FA9DA /* FirebaseAPI.swift */; };
 		B56663802A449DA2007FA9DA /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566637F2A449DA2007FA9DA /* Api.swift */; };
 		B56663822A449DB6007FA9DA /* APIAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663812A449DB6007FA9DA /* APIAddress.swift */; };
 		B56663852A449DDA007FA9DA /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663842A449DDA007FA9DA /* APIError.swift */; };
@@ -96,7 +96,7 @@
 		B566636D2A449C80007FA9DA /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		B566636F2A449CA9007FA9DA /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		B56663732A449CF9007FA9DA /* Api+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Extension.swift"; sourceTree = "<group>"; };
-		B566637C2A449D81007FA9DA /* FibaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibaseAPI.swift; sourceTree = "<group>"; };
+		B566637C2A449D81007FA9DA /* FirebaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPI.swift; sourceTree = "<group>"; };
 		B566637F2A449DA2007FA9DA /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		B56663812A449DB6007FA9DA /* APIAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAddress.swift; sourceTree = "<group>"; };
 		B56663842A449DDA007FA9DA /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -425,7 +425,7 @@
 		B566637B2A449D76007FA9DA /* ApiService */ = {
 			isa = PBXGroup;
 			children = (
-				B566637C2A449D81007FA9DA /* FibaseAPI.swift */,
+				B566637C2A449D81007FA9DA /* FirebaseAPI.swift */,
 			);
 			path = ApiService;
 			sourceTree = "<group>";
@@ -612,7 +612,7 @@
 				B56663352A449953007FA9DA /* Date+Extension.swift in Sources */,
 				B56663392A4499AE007FA9DA /* Notification+Extension.swift in Sources */,
 				B56663582A449B21007FA9DA /* HomeView.swift in Sources */,
-				B566637D2A449D81007FA9DA /* FibaseAPI.swift in Sources */,
+				B566637D2A449D81007FA9DA /* FirebaseAPI.swift in Sources */,
 				B56663802A449DA2007FA9DA /* Api.swift in Sources */,
 				B56663332A44993A007FA9DA /* Color+Extension.swift in Sources */,
 				B566633F2A4499F8007FA9DA /* FireBaseManager.swift in Sources */,

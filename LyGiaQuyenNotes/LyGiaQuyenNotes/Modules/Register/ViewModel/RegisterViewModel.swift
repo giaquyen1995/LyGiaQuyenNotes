@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseAuth
 import Combine
+
 @MainActor class RegisterViewModel: BaseObservableObject {
     @Published var error: Error?
     @Published var isRegistered = false

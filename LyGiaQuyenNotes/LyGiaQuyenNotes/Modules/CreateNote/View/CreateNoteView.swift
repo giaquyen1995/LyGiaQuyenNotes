@@ -30,12 +30,7 @@ struct CreateNoteView: View {
                 let noteParts = noteText.split(separator: "\n", maxSplits: 1, omittingEmptySubsequences: true)
                 let noteTitle = String(noteParts.first ?? "")
                 let noteContent = noteParts.count > 1 ? String(noteParts[1]) : ""
-                
-                if let existingNote = note {
-                    viewModel.updateNote(id: existingNote.id, title: noteTitle, content: noteContent, date: Date().toString(format: "yyyy-MM-dd'T'HH:mm:ss"))
-                } else {
-                    viewModel.createNote(title: noteTitle, content: noteContent, date: Date().toString(format: "yyyy-MM-dd'T'HH:mm:ss"))
-                }
+                viewModel.createOrUpDateNote(noteId: note?.id, title: noteTitle, content: noteContent)
             } : nil )
             .navigationBarTitleDisplayMode(.inline)
             .onReceive(viewModel.$isSucess) { isSucess in

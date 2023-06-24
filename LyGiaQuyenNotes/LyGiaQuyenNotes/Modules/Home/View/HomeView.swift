@@ -28,14 +28,12 @@ struct HomeView: View {
                         Label("My Notes", systemImage: "1.square.fill")
                     }
                     .tag(0)
-                    .environmentObject(viewModel)
                 
                 NotesListView(useOtherNotes: true, notes: viewModel.othersNotes)
                     .tabItem {
                         Label("Other's Notes", systemImage: "2.square.fill")
                     }
                     .tag(1)
-                    .environmentObject(viewModel)
             }
             .accentColor(.blue)
             .navigationBarItems(leading: profileButton, trailing: createNoteButton)

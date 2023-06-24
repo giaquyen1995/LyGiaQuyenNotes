@@ -16,6 +16,16 @@ The approach taken to develop this application involves:
 
 4. **Data Management**: Integration of Firebase real-time database for saving and fetching notes. The database structure has been designed to store notes against the respective usernames.
 
+5. **Architecture**: The application follows the MVVM (Model-View-ViewModel) architectural pattern. This architecture is ideal for SwiftUI applications because it supports two-way data binding, which automatically ensures that the UI is kept in sync with updates to the underlying data. Moreover, by separating concerns, it makes the code more maintainable and testable:
+   
+   - **Model**: Represents the data and business logic of the app. The models are the data structures used to work with the notes in the Firebase database.
+   - **View**:  The View represents the UI of the app. In SwiftUI, views are a function of their state and are updated automatically when their state changes. The views in this app include the screens for register, signin, creating notes, and home to displaying the list of notes.
+   - **ViewModel**: The ViewModel serves as a bridge between the Model and the View. It exposes the data and commands that the View can use to perform actions. This means that the View doesn't need to know anything about the Model, which helps to keep the UI code clean and simple. The ViewModels in this app handle operations such as saving and retrieving notes from Firebase.
+   
+   By using the MVVM pattern, the application can achieve a clean, modular design where it's easy to understand how different parts of the code interact, making the codebase easier to maintain and evolve over time.
+
+
+
 ## Time Spent
 
 The following is an approximation of the time spent during the development:

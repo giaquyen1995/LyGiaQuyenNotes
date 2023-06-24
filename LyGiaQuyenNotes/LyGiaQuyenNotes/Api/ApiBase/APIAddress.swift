@@ -9,5 +9,5 @@ import Foundation
 public enum AddressApi: String {
     case getMyNotes = "users/{userId}/notes"
     case getOthersNotes =  "users"
-    case createAndEditNote = "users/{userId}/notes/{noteId}"
+    case createOrUpdateNote = "users/{userId}/notes/{noteId}"
 }

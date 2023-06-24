@@ -31,8 +31,8 @@ public extension API {
         throw ApiError.invalidObject
     }
     
-    static func createNote(note: Note, userId: String, noteId: String) async throws {
-        let _ = try await request(url: .createAndEditNote, method: .post, header: ["userId": userId, "noteId": noteId], params: note.asDictionary())
+    static func createOrUpdateNote(note: Note, userId: String, noteId: String) async throws {
+        let _ = try await request(url: .createOrUpdateNote, method: .post, header: ["userId": userId, "noteId": noteId], params: note.asDictionary())
     }
     
     static func signIn(email: String, password: String) async throws -> AuthDataResult {
