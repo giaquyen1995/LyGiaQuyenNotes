@@ -9,6 +9,11 @@ import Foundation
 
 extension String {
     
+    func encodedFirebasePathComponent() -> String {
+            let allowedCharacters = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_")
+            return self.addingPercentEncoding(withAllowedCharacters: allowedCharacters) ?? ""
+        }
+    
     func convertDateFormat() -> String? {
         let currentDateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         let targetDateFormat = "yyyy-MM-dd 'at' HH:mm"

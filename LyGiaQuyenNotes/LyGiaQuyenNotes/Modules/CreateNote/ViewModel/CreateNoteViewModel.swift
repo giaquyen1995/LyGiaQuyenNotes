@@ -8,6 +8,7 @@
 import Foundation
 import Firebase
 import Combine
+
 @MainActor class CreateNoteViewModel: BaseObservableObject {
     @Published var isSucess = false
     
@@ -25,8 +26,9 @@ import Combine
                 } else {
                     id = FireBaseManager.shared.ref.child("users").child(userID).child("notes").childByAutoId().key ?? ""
                 }
-                let newNoteWithID = Note(id: id, title: title, content: content, date: date, user: email)
-                try await API.createOrUpdateNote(note: newNoteWithID, userId: userID, noteId: id)
+                
+                let newNoteWithID = Note(id: id.encodedFirebasePathComponent(), title: title, content: content, date: date, user: email)
+                try await API.createOrUpdateNote(note: newNoteWithID, userId: userID, noteId: id.encodedFirebasePathComponent())
                 self.isSucess = true
             } catch {
                 self.isSucess = false

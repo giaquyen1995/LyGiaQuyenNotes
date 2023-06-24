@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NotesListView: View {
     @State private var selectedNote: Note? = nil
+    @Binding var reloadNote: Bool
     var useOtherNotes: Bool
     var notes: [Note]  = []
     
@@ -30,7 +31,7 @@ struct NotesListView: View {
             }
         } .background(
             NavigationLink(
-                destination: CreateNoteView(note: selectedNote, isEditable: !useOtherNotes),
+                destination: CreateNoteView(reloadNote: $reloadNote, note: selectedNote, isEditable: !useOtherNotes),
                 isActive: Binding<Bool>(get: { selectedNote != nil }, set: { _ in selectedNote = nil }),
                 label: { EmptyView() }
             )

@@ -6,15 +6,16 @@
 //
 
 import SwiftUI
+
 struct HomeView: View {
     @EnvironmentObject var appRouter: AppRouter
     @StateObject var viewModel = HomeViewModel()
-    
     @State private var showingAlert = false
     @State private var isLoading = false
-    
     @State private var selection = 0
     @State private var selectedNote: Note? = nil
+    @State private var reloadNote = false
+    
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor.white
@@ -23,13 +24,13 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             TabView(selection: $selection) {
-                NotesListView(useOtherNotes: false, notes: viewModel.myNotes)
+                NotesListView(reloadNote: $reloadNote, useOtherNotes: false, notes: viewModel.myNotes)
                     .tabItem {
                         Label("My Notes", systemImage: "1.square.fill")
                     }
                     .tag(0)
                 
-                NotesListView(useOtherNotes: true, notes: viewModel.othersNotes)
+                NotesListView(reloadNote: $reloadNote, useOtherNotes: true, notes: viewModel.othersNotes)
                     .tabItem {
                         Label("Other's Notes", systemImage: "2.square.fill")
                     }
@@ -50,11 +51,16 @@ struct HomeView: View {
         .onReceive(appRouter.$isSignIn) { isSignIn in
             if isSignIn {
                 viewModel.fetchNotes()
-            }}
-        .onReceive(NotificationCenter.default.publisher(for: .didCreateNote)) { _ in viewModel.fetchNotes() }
+            }
+        }
+        .onChange(of: reloadNote) { _ in
+            viewModel.fetchNotes()
+            reloadNote = false
+        }
+        
         .onReceive(viewModel.$isSignout) { appRouter.state = $0 ? .signin : appRouter.state }
         .onReceive(viewModel.$isLoading) { isLoading = $0 }
-        .accessibilityIdentifier("homeScreenElement") // for unit test 
+        .accessibilityIdentifier("homeScreenElement") // for unit test
         
     }
 }
@@ -76,7 +82,7 @@ private extension HomeView {
     }
     
     var createNoteButton: some View {
-        NavigationLink(destination: CreateNoteView(note: selectedNote, isEditable: true)) {
+        NavigationLink(destination: CreateNoteView(reloadNote: $reloadNote, note: selectedNote, isEditable: true)) {
             Image(systemName: "plus")
         }
     }

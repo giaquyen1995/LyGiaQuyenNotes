@@ -45,6 +45,7 @@ struct RegisterView: View {
                     .font(.headline)
             }
             TextFieldView(title: "Email", text: $username)
+                .keyboardType(.emailAddress)
             SecureTextFieldView(title: "Password", text: $password)
             SecureTextFieldView(title: "Confirm password", text: $confirmPassword)
             
@@ -74,6 +75,7 @@ struct RegisterView: View {
             if isRegistered {
                 appRouter.state = .home
                 appRouter.isSignIn = true
+                registerViewModel.hideKeyboard()
                 
             }
         }

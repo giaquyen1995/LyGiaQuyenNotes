@@ -25,9 +25,9 @@ struct SignInView: View {
                     Text("Please log in into your account")
                         .font(.headline)
                 }
-                TextFieldView(title: "User name", text: $username)
+                TextFieldView(title: "Email", text: $username)
+                    .keyboardType(.emailAddress)
                 SecureTextFieldView(title: "Password", text: $password)
-                
                 Button(action: {
                     self.viewModel.signin(email: self.username, password: self.password)
                 }) {
@@ -62,6 +62,7 @@ struct SignInView: View {
                 if isSignin {
                     appRouter.state = .home
                     appRouter.isSignIn = true
+                    viewModel.hideKeyboard()
                 }
             }
             .onReceive(viewModel.$error) { error in

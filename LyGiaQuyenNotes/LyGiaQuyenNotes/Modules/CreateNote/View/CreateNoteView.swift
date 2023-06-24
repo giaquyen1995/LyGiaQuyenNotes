@@ -12,6 +12,7 @@ struct CreateNoteView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @FocusState private var isKeyboardActive: Bool
     @State private var noteText: String = ""
+    @Binding var reloadNote: Bool
     var note: Note?
     var isEditable: Bool
     var body: some View {
@@ -35,7 +36,8 @@ struct CreateNoteView: View {
             .navigationBarTitleDisplayMode(.inline)
             .onReceive(viewModel.$isSucess) { isSucess in
                 if isSucess {
-                    NotificationCenter.default.post(name: .didCreateNote, object: nil)
+                    viewModel.hideKeyboard()
+                    reloadNote = true
                     self.presentationMode.wrappedValue.dismiss()
                 }
             }
