@@ -9,6 +9,10 @@ import Foundation
 
 extension String {
     
+    private static var dateFormatter: DateFormatter = {
+          let dateFormatter = DateFormatter()
+          return dateFormatter
+    }()
     func encodedFirebasePathComponent() -> String {
             let allowedCharacters = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_")
             return self.addingPercentEncoding(withAllowedCharacters: allowedCharacters) ?? ""
@@ -17,17 +21,15 @@ extension String {
     func convertDateFormat() -> String? {
         let currentDateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         let targetDateFormat = "yyyy-MM-dd 'at' HH:mm"
+        Self.dateFormatter.dateFormat = currentDateFormat
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = currentDateFormat
-        
-        guard let date = dateFormatter.date(from: self) else {
+        guard let date = Self.dateFormatter.date(from: self) else {
             return nil
         }
         
-        dateFormatter.dateFormat = targetDateFormat
-        dateFormatter.timeZone = TimeZone.current // Convert to local time zone for output
+        Self.dateFormatter.dateFormat = targetDateFormat
+        Self.dateFormatter.timeZone = TimeZone.current // Convert to local time zone for output
         
-        return dateFormatter.string(from: date)
+        return Self.dateFormatter.string(from: date)
     }
 }

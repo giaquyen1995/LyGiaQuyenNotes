@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B548B00B2A4307E9002CD580 /* LyGiaQuyenNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B548B00A2A4307E9002CD580 /* LyGiaQuyenNotesApp.swift */; };
-		B548B00D2A4307E9002CD580 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B548B00C2A4307E9002CD580 /* ContentView.swift */; };
 		B548B00F2A4307EB002CD580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B548B00E2A4307EB002CD580 /* Assets.xcassets */; };
 		B548B0132A4307EB002CD580 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B548B0122A4307EB002CD580 /* Preview Assets.xcassets */; };
 		B548B01D2A4307EB002CD580 /* LyGiaQuyenNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B548B01C2A4307EB002CD580 /* LyGiaQuyenNotesTests.swift */; };
@@ -68,7 +67,6 @@
 /* Begin PBXFileReference section */
 		B548B0072A4307E9002CD580 /* LyGiaQuyenNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyGiaQuyenNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B548B00A2A4307E9002CD580 /* LyGiaQuyenNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyGiaQuyenNotesApp.swift; sourceTree = "<group>"; };
-		B548B00C2A4307E9002CD580 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B548B00E2A4307EB002CD580 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B548B0102A4307EB002CD580 /* LyGiaQuyenNotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LyGiaQuyenNotes.entitlements; sourceTree = "<group>"; };
 		B548B0122A4307EB002CD580 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 				B566633D2A4499E2007FA9DA /* Share */,
 				B566633A2A4499BB007FA9DA /* Base */,
 				B56663312A449902007FA9DA /* Extension */,
-				B548B00C2A4307E9002CD580 /* ContentView.swift */,
 				B548B00E2A4307EB002CD580 /* Assets.xcassets */,
 				B548B0102A4307EB002CD580 /* LyGiaQuyenNotes.entitlements */,
 				B548B0112A4307EB002CD580 /* Preview Content */,
@@ -621,7 +618,6 @@
 			files = (
 				B56663912A44A017007FA9DA /* CreateNoteViewModel.swift in Sources */,
 				B56663562A449B09007FA9DA /* NotesResponse.swift in Sources */,
-				B548B00D2A4307E9002CD580 /* ContentView.swift in Sources */,
 				B566635E2A449BAA007FA9DA /* SplashView.swift in Sources */,
 				B566634C2A449A75007FA9DA /* AlertModifier.swift in Sources */,
 				B56663692A449C44007FA9DA /* SignInViewModel.swift in Sources */,
