@@ -34,5 +34,4 @@ import Combine
             self.addTasks([task])
         }
     }
-    
 }

@@ -73,6 +73,7 @@ struct RegisterView: View {
         .overlay(isLoading ? ProgressIndicatior() : nil)
         .onReceive(registerViewModel.$isRegistered) { isRegistered in
             if isRegistered {
+                registerViewModel.hideKeyboard()
                 appRouter.state = .home
                 appRouter.isSignIn = true
                 
