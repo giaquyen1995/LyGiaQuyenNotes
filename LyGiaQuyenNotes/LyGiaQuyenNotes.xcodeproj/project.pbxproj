@@ -139,6 +139,7 @@
 		B548AFFE2A4307E9002CD580 = {
 			isa = PBXGroup;
 			children = (
+				B56663862A449EC8007FA9DA /* GoogleService-Info.plist */,
 				B548B0092A4307E9002CD580 /* LyGiaQuyenNotes */,
 				B548B01B2A4307EB002CD580 /* LyGiaQuyenNotesTests */,
 				B548B0252A4307EB002CD580 /* LyGiaQuyenNotesUITests */,
@@ -160,7 +161,6 @@
 		B548B0092A4307E9002CD580 /* LyGiaQuyenNotes */ = {
 			isa = PBXGroup;
 			children = (
-				B56663862A449EC8007FA9DA /* GoogleService-Info.plist */,
 				B56663712A449CD3007FA9DA /* Api */,
 				B566634D2A449A90007FA9DA /* Modules */,
 				B56663402A449A15007FA9DA /* Component */,

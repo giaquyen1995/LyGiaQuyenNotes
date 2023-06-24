@@ -20,11 +20,12 @@ final class LyGiaQuyenNotesTests: XCTestCase {
         super.setUp()
         if FirebaseApp.app() == nil {
             FirebaseApp.configure()
+            
         }
     }
     
     func testGetMyNotes() {
-        let expectation = XCTestExpectation(description: "Completion my notes")
+        let expectation = XCTestExpectation(description: "Completion my notes \(Int.random(in: 0...9999))")
         
         Task {
             do {
@@ -47,7 +48,7 @@ final class LyGiaQuyenNotesTests: XCTestCase {
     }
     
     func testGetOthersNotes() {
-        let expectation = XCTestExpectation(description: "Completion other note")
+        let expectation = XCTestExpectation(description: "Completion other note \(Int.random(in: 0...9999))")
         
         Task {
             do {
@@ -70,14 +71,14 @@ final class LyGiaQuyenNotesTests: XCTestCase {
     
     
     
-    func testFirebaseOperations() {
+    func testRegister() {
         let email = "testuser\(Int.random(in: 1000...9999))@example.com"
         let password = "TestPassword123"
         
-        let expectation = XCTestExpectation(description: "User registration")
+        let expectation = XCTestExpectation(description: "User registration \(Int.random(in: 0...9999))")
         Task {
             do {
-                let user = try await API.registerUser(email: email, password: password)
+                _ = try await API.registerUser(email: email, password: password)
                 XCTAssertNotNil(auth, "Auth should not be nil")
                 expectation.fulfill()
             } catch {
@@ -90,10 +91,10 @@ final class LyGiaQuyenNotesTests: XCTestCase {
    
     
     func testSignIn() {
-        let email = "giquyen@gmail.com"
+        let email = "giaquyen@gmail.com"
         let password = "123456"
         
-        let expectation = XCTestExpectation(description: "Sign In")
+        let expectation = XCTestExpectation(description: "Sign In \(Int.random(in: 0...9999))")
         
         Task {
             do {
@@ -109,10 +110,8 @@ final class LyGiaQuyenNotesTests: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
     
-    
-    
     func testSignout() {
-        let expectation = XCTestExpectation(description: "Completion sign out")
+        let expectation = XCTestExpectation(description: "Completion sign out \(Int.random(in: 0...9999))")
         Task {
             do {
                 try Auth.auth().signOut()
@@ -125,4 +124,43 @@ final class LyGiaQuyenNotesTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 5)
     }
+    
+    func generateRandomString() -> String {
+        let characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_"
+        let length = 10
+        var randomString = ""
+        
+        for _ in 0..<length {
+            let randomIndex = Int.random(in: 0..<characters.count)
+            let character = characters[characters.index(characters.startIndex, offsetBy: randomIndex)]
+            randomString.append(character)
+        }
+        
+        return randomString
+    }
+    
+    func testCreateNote() {
+        let userID = FireBaseManager.shared.userId
+        let email = FireBaseManager.shared.userName
+        let title = "noteTitle"
+        let content = "noteContent"
+        let date = Date().toString(format: "yyyy-MM-dd'T'HH:mm:ss")
+        let id = generateRandomString()
+
+        let expectation = XCTestExpectation(description: "Create note \(Int.random(in: 0...9999))")
+        
+        Task {
+            do {
+                try await API.createOrUpdateNote(note: Note(id: id, title: title, content: content, date: date, user: ""), userId: userID, noteId: id)
+                expectation.fulfill()
+            } catch {
+                XCTFail("Sign In failed with error: \(error)")
+                expectation.fulfill()
+            }
+        }
+        
+        wait(for: [expectation], timeout: 5)
+    }
+    
+    
 }

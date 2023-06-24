@@ -28,10 +28,7 @@ struct CreateNoteView: View {
             .focused($isKeyboardActive)
             .disabled(!isEditable)
             .navigationBarItems(trailing: isEditable ?  Button("Done") {
-                let noteParts = noteText.split(separator: "\n", maxSplits: 1, omittingEmptySubsequences: true)
-                let noteTitle = String(noteParts.first ?? "")
-                let noteContent = noteParts.count > 1 ? String(noteParts[1]) : ""
-                viewModel.createOrUpDateNote(noteId: note?.id, title: noteTitle, content: noteContent)
+                viewModel.createOrUpDateNote(noteId: note?.id, text: noteText)
             } : nil )
             .navigationBarTitleDisplayMode(.inline)
             .onReceive(viewModel.$isSucess) { isSucess in
