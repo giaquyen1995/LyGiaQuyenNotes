@@ -75,7 +75,6 @@ struct RegisterView: View {
             if isRegistered {
                 appRouter.state = .home
                 appRouter.isSignIn = true
-                registerViewModel.hideKeyboard()
                 
             }
         }

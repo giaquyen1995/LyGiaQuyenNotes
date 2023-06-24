@@ -62,7 +62,6 @@ struct SignInView: View {
                 if isSignin {
                     appRouter.state = .home
                     appRouter.isSignIn = true
-                    viewModel.hideKeyboard()
                 }
             }
             .onReceive(viewModel.$error) { error in

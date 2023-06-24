@@ -39,54 +39,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C2728C08-D476-4A76-827E-52FA517C4E15"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LyGiaQuyenNotes/Modules/Home/View/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "C2728C08-D476-4A76-827E-52FA517C4E15 - e05f2d5e30145f98"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LyGiaQuyenNotes.HomeView.body.getter : some"
-                  moduleName = "LyGiaQuyenNotes"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vfa/LyGiaQuyenNotes/LyGiaQuyenNotes/LyGiaQuyenNotes/Modules/Home/View/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "1600">
-               </Location>
-               <Location
-                  uuid = "C2728C08-D476-4A76-827E-52FA517C4E15 - d768736cdd64d4b9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #3 (Swift.Bool) -&gt; () in LyGiaQuyenNotes.HomeView.body.getter : some"
-                  moduleName = "LyGiaQuyenNotes"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vfa/LyGiaQuyenNotes/LyGiaQuyenNotes/LyGiaQuyenNotes/Modules/Home/View/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "463F26F6-946A-4346-8F8C-7B92A376BD0C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"

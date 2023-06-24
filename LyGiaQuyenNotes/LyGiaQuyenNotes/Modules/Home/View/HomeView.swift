@@ -37,6 +37,7 @@ struct HomeView: View {
                     .tag(1)
             }
             .accentColor(.blue)
+            .navigationBarTitleDisplayMode(.automatic)
             .navigationBarItems(leading: profileButton, trailing: createNoteButton)
             .modifier(AlertModifier(showAlert: $showingAlert,
                                     title: "Sign out",
@@ -47,7 +48,6 @@ struct HomeView: View {
             }}))
             
         }
-        .navigationBarTitleDisplayMode(.inline)
         .overlay(isLoading ? ProgressIndicatior() : nil)
         .onReceive(appRouter.$isSignIn) { isSignIn in
             if isSignIn {

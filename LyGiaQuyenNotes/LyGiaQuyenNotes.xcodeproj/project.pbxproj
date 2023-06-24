@@ -44,6 +44,8 @@
 		B566638C2A449F72007FA9DA /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B566638B2A449F72007FA9DA /* FirebaseDatabase */; };
 		B56663912A44A017007FA9DA /* CreateNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663902A44A017007FA9DA /* CreateNoteViewModel.swift */; };
 		B56663932A44A033007FA9DA /* CreateNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56663922A44A033007FA9DA /* CreateNoteView.swift */; };
+		B5CB5FF52A46FDF300E5C4B9 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B5CB5FF42A46FDF300E5C4B9 /* FirebaseAuth */; };
+		B5CB5FF92A46FE1900E5C4B9 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B5CB5FF82A46FE1900E5C4B9 /* FirebaseDatabase */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5CB5FF92A46FE1900E5C4B9 /* FirebaseDatabase in Frameworks */,
+				B5CB5FF52A46FDF300E5C4B9 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +143,7 @@
 				B548B01B2A4307EB002CD580 /* LyGiaQuyenNotesTests */,
 				B548B0252A4307EB002CD580 /* LyGiaQuyenNotesUITests */,
 				B548B0082A4307E9002CD580 /* Products */,
+				B5CB5FF32A46FDF300E5C4B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -465,6 +470,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		B5CB5FF32A46FDF300E5C4B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -503,6 +515,10 @@
 				B548B01A2A4307EB002CD580 /* PBXTargetDependency */,
 			);
 			name = LyGiaQuyenNotesTests;
+			packageProductDependencies = (
+				B5CB5FF42A46FDF300E5C4B9 /* FirebaseAuth */,
+				B5CB5FF82A46FE1900E5C4B9 /* FirebaseDatabase */,
+			);
 			productName = LyGiaQuyenNotesTests;
 			productReference = B548B0182A4307EB002CD580 /* LyGiaQuyenNotesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -783,9 +799,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LyGiaQuyenNotes/LyGiaQuyenNotes.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LyGiaQuyenNotes/Preview Content\"";
+				DEVELOPMENT_TEAM = QCB4C29P74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -805,6 +823,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = LyGiaQuyen.LyGiaQuyenNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -821,9 +840,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LyGiaQuyenNotes/LyGiaQuyenNotes.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LyGiaQuyenNotes/Preview Content\"";
+				DEVELOPMENT_TEAM = QCB4C29P74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -843,6 +864,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = LyGiaQuyen.LyGiaQuyenNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -998,6 +1020,16 @@
 			productName = FirebaseAuth;
 		};
 		B566638B2A449F72007FA9DA /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B56663882A449F72007FA9DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		B5CB5FF42A46FDF300E5C4B9 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B56663882A449F72007FA9DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		B5CB5FF82A46FE1900E5C4B9 /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B56663882A449F72007FA9DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;

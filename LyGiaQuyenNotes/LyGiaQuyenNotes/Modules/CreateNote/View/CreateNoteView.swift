@@ -36,7 +36,6 @@ struct CreateNoteView: View {
             .navigationBarTitleDisplayMode(.inline)
             .onReceive(viewModel.$isSucess) { isSucess in
                 if isSucess {
-                    viewModel.hideKeyboard()
                     reloadNote = true
                     self.presentationMode.wrappedValue.dismiss()
                 }

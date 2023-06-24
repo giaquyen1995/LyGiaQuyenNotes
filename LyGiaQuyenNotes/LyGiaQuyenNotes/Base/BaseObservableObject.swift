@@ -18,10 +18,6 @@ class BaseObservableObject:ObservableObject {
         tasks.append(contentsOf: t)
     }
     
-    func hideKeyboard() {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
-    
     deinit {
         tasks.forEach({$0.cancel()})
         cancellables.removeAll()
