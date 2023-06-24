@@ -19,6 +19,10 @@ struct HomeView: View {
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor.white
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
     
     var body: some View {
