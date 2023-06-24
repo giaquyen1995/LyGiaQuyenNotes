@@ -47,6 +47,7 @@ struct HomeView: View {
             }}))
             
         }
+        .navigationBarTitleDisplayMode(.inline)
         .overlay(isLoading ? ProgressIndicatior() : nil)
         .onReceive(appRouter.$isSignIn) { isSignIn in
             if isSignIn {
@@ -57,7 +58,6 @@ struct HomeView: View {
             viewModel.fetchNotes()
             reloadNote = false
         }
-        
         .onReceive(viewModel.$isSignout) { appRouter.state = $0 ? .signin : appRouter.state }
         .onReceive(viewModel.$isLoading) { isLoading = $0 }
         .accessibilityIdentifier("homeScreenElement") // for unit test
