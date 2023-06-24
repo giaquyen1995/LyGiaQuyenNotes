@@ -37,7 +37,7 @@ struct HomeView: View {
                     .tag(1)
             }
             .accentColor(.blue)
-            .navigationBarTitleDisplayMode(.automatic)
+            .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(leading: profileButton, trailing: createNoteButton)
             .modifier(AlertModifier(showAlert: $showingAlert,
                                     title: "Sign out",
