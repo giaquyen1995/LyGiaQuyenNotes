@@ -21,7 +21,7 @@ MVVM has three main components: Model, View, and ViewModel.
 
 - **ViewModel**: The ViewModel serves as a bridge between the Model and the View. It exposes the data and commands that the View can use to perform actions. This means that the View doesn't need to know anything about the Model, which helps to keep the UI code clean and simple. The ViewModels in this app handle operations such as saving and retrieving notes from Firebase.
 
-# Why MVVM with Clean Architecture?
+# Why MVVM?
 
 - MVVM separates our view from our business logic. By using the MVVM pattern, the application can achieve a clean, modular design where it's easy to understand how different parts of the code interact, making the codebase easier to maintain and evolve over time.
 
