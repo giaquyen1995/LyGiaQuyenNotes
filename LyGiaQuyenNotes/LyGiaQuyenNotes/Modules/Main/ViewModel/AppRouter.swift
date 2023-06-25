@@ -11,12 +11,17 @@ import Firebase
     @Published var state: AppState = .splash
     @Published var isSignIn: Bool = false
     func checkIfUserIsSignedIn() {
-        if Auth.auth().currentUser != nil {
-            self.state = .home
-            isSignIn = true
-        } else {
-            self.state = .signin
-            isSignIn = false
+        // I wanted this place to show the logo at splash a little longer so I delay 0.5 seconds
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+            guard let self = self else { return }
+                if Auth.auth().currentUser != nil {
+                    self.state = .home
+                    isSignIn = true
+                } else {
+                    self.state = .signin
+                    isSignIn = false
+                }
+            
         }
     }
 }

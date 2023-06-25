@@ -53,7 +53,7 @@ struct HomeView: View {
             
         }
         .overlay(isLoading ? ProgressIndicatior() : nil)
-        .onReceive(appRouter.$isSignIn) { isSignIn in
+        .onReceive(appRouter.$isSignIn) {isSignIn in
             if isSignIn {
                 viewModel.fetchNotes()
             }

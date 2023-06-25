@@ -18,7 +18,8 @@ import Combine
         isLoading = true
         
         // Because the firebase api is fast, it doesn't feel real so I delay 0.5 load time to see the UI better
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {[weak self] in
+            guard let self = self else { return }
             let task = Task {
                 do {
                     let authResult = try await API.signIn(email: email, password: password)
