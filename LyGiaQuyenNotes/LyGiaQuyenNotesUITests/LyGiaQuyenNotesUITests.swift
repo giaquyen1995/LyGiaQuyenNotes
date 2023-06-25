@@ -33,7 +33,7 @@ final class LyGiaQuyenNotesUITests: XCTestCase {
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
             // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
+                        measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()
             }
         }
@@ -45,7 +45,6 @@ final class LyGiaQuyenNotesUITests: XCTestCase {
         let app = XCUIApplication()
         
         app.launch()
-        let homeScreenElement = app.otherElements["homeScreenElement"]
         
         let possibleLoggedInEmailButton = app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons.firstMatch
            if possibleLoggedInEmailButton.exists {
@@ -66,7 +65,8 @@ final class LyGiaQuyenNotesUITests: XCTestCase {
         
         // Tap on the sign in button
         signInButton.tap()
-        
+        let homeScreenElement = app.otherElements["homeScreenElement"]
+
         XCTAssertTrue(homeScreenElement.waitForExistence(timeout: 5))
         
     }
@@ -77,7 +77,6 @@ final class LyGiaQuyenNotesUITests: XCTestCase {
         let app = XCUIApplication()
         
         app.launch()
-        let homeScreenElement = app.otherElements["homeScreenElement"]
         
         let possibleLoggedInEmailButton = app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons.firstMatch
            if possibleLoggedInEmailButton.exists {
@@ -105,8 +104,62 @@ final class LyGiaQuyenNotesUITests: XCTestCase {
         
         // Tap on the sign in button
         signupButton.tap()
+        let homeScreenElement = app.otherElements["homeScreenElement"]
+
+        XCTAssertTrue(homeScreenElement.waitForExistence(timeout: 5))
+        
+    }
+    func testCreateNote() throws {
+        continueAfterFailure = false
+        
+        let app = XCUIApplication()
+        app.launch()
+        let homeScreenElement = app.otherElements["homeScreenElement"]
+        let signinView = app.otherElements["signinScreenElement"]
+
+        if homeScreenElement.exists {
+            app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["Thêm"].tap()
+            let title = app.textFields["Enter your title"]
+
+            let textView = app.otherElements["homeScreenElement"].children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textView).element
+            
+            title.tap()
+            title.typeText("new note")
+            
+            textView.tap()
+            textView.typeText("helolol")
+        
+            app.navigationBars["Create note"].buttons["Done"].tap()
+        } else if signinView.exists {
+            let usernameField = app.textFields["Email"]
+            let passwordField = app.secureTextFields["Password"]
+            let signInButton = app.buttons["Sign in"]
+            // Tap on the fields and enter text
+            usernameField.tap()
+            usernameField.typeText("giaquyen@gmail.com")
+            
+            passwordField.tap()
+            passwordField.typeText("123456")
+            
+            // Tap on the sign in button
+            signInButton.tap()
+            
+            app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["Thêm"].tap()
+            let title = app.textFields["Enter your title"]
+
+            let textView = app.otherElements["homeScreenElement"].children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textView).element
+            
+            title.tap()
+            title.typeText("new note")
+            
+            textView.tap()
+            textView.typeText("helolol")
+        
+            app.navigationBars["Create note"].buttons["Done"].tap()
+        }
         
         XCTAssertTrue(homeScreenElement.waitForExistence(timeout: 5))
         
     }
+    
 }

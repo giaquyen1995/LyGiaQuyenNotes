@@ -18,10 +18,64 @@ final class LyGiaQuyenNotesTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        if FirebaseApp.app() == nil {
             FirebaseApp.configure()
             
+        
+    }
+    
+    override func setUpWithError() throws {
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+
+    override func tearDownWithError() throws {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+
+    func testExample() throws {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        // Any test you write for XCTest can be annotated as throws and async.
+        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
+        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    }
+
+    
+    // sometimes test case crash because firebase test instance and firebase real config version don't sync with each other
+    func testSignIn() {
+        let email = "giaquyen@gmail.com"
+        let password = "123456"
+        
+        let expectation = XCTestExpectation(description: "Sign In \(Int.random(in: 0...9999))")
+        
+        Task {
+            do {
+                let auth = try await API.signIn(email: email, password: password)
+                XCTAssertNotNil(auth, "Auth should not be nil")
+                expectation.fulfill()
+            } catch {
+                XCTFail("Sign In failed with error: \(error)")
+                expectation.fulfill()
+            }
         }
+        
+        wait(for: [expectation], timeout: 5)
+    }
+    
+    
+    // sometimes test case crash because firebase test instance and firebase real config version don't sync with each other
+    func testSignout() {
+        let expectation = XCTestExpectation(description: "Completion sign out \(Int.random(in: 0...9999))")
+        Task {
+            do {
+                try Auth.auth().signOut()
+                    expectation.fulfill()
+                
+            } catch {
+                    expectation.fulfill()
+                XCTFail("Sign out failed with error")
+            }
+        }
+        wait(for: [expectation], timeout: 5)
     }
     
     // sometimes test case crash because firebase test instance and firebase real config version don't sync with each other
@@ -91,42 +145,7 @@ final class LyGiaQuyenNotesTests: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
    
-    // sometimes test case crash because firebase test instance and firebase real config version don't sync with each other
-    func testSignIn() {
-        let email = "giaquyen@gmail.com"
-        let password = "123456"
-        
-        let expectation = XCTestExpectation(description: "Sign In \(Int.random(in: 0...9999))")
-        
-        Task {
-            do {
-                let auth = try await API.signIn(email: email, password: password)
-                XCTAssertNotNil(auth, "Auth should not be nil")
-                expectation.fulfill()
-            } catch {
-                XCTFail("Sign In failed with error: \(error)")
-                expectation.fulfill()
-            }
-        }
-        
-        wait(for: [expectation], timeout: 5)
-    }
-    
-    // sometimes test case crash because firebase test instance and firebase real config version don't sync with each other
-    func testSignout() {
-        let expectation = XCTestExpectation(description: "Completion sign out \(Int.random(in: 0...9999))")
-        Task {
-            do {
-                try Auth.auth().signOut()
-                    expectation.fulfill()
-                
-            } catch {
-                    expectation.fulfill()
-                XCTFail("Sign out failed with error")
-            }
-        }
-        wait(for: [expectation], timeout: 5)
-    }
+  
     
     func generateRandomString() -> String {
         let characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_"
