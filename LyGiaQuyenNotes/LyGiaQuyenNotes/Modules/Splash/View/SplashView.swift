@@ -16,8 +16,9 @@ struct SplashView: View {
                 .aspectRatio(contentMode: .fill)
                 .edgesIgnoringSafeArea(.all)
         }.onAppear {
-            appRouter.checkIfUserIsSignedIn()
-
+            withAnimation {
+                appRouter.checkIfUserIsSignedIn()
+            }
         }
     }
 }
