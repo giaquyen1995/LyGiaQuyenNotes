@@ -59,6 +59,15 @@ The following is an approximation of the time spent during the development:
 
 4. Data Validation: The application currently doesn't validate the input data, which could lead to saving of inappropriate content.
 
+# Check list
+1. As a user (of the application) I can set my username ✔
+
+2. As a user, I can save a short note to the Firebase database. ✔
+
+3. As a user, I can see a list of my saved notes. ✔
+
+4. As a user, I can see all the notes from other users. ✔
+
 # Running the Application
 
 1. Clone the repo
@@ -66,3 +75,4 @@ The following is an approximation of the time spent during the development:
 3. Run the app on a simulator or an actual device
 
 Please ensure that you have the latest versions of SwiftUI and Firebase installed in your Xcode.
+
