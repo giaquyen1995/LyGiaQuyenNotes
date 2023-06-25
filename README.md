@@ -72,17 +72,18 @@ The View represents the UI of the app Text, Tabview...
 ViewModel performs pure transformation of a user Input to the Output:
 
 ```swift
-@MainActor class HomeViewModel: BaseObservableObject {
-@Published var myNotes:[Note] = []
-@Published var othersNotes:[Note] = []
+    @MainActor class HomeViewModel: BaseObservableObject {
+        @Published var myNotes:[Note] = []
+        @Published var othersNotes:[Note] = []
 
-    func fetchNotes() {}
+        func fetchNotes() {}
     }
+    
 ```
 
 ```swift
-struct HomeView: View { 
-    @StateObject var viewModel = HomeViewModel()
+    struct HomeView: View { 
+        @StateObject var viewModel = HomeViewModel()
     }
 ```
 
@@ -128,15 +129,22 @@ ViewModel interacts with Model to request and receive data. In current example, 
 ViewModel returns data on View through binding. In the current example, when model update data for myNotes and otherNotes, the data return via @ObservableObject
 
 ```swift
+        .onReceive(viewModel.$myNotes.combineLatest(viewModel.$othersNotes), perform: { (myNotes,otherNotes) in
+            self.myNotes = myNotes
+            self.othersNotes = otherNotes
+        })
+```
+
+```swift
     NavigationView {
         TabView(selection: $selection) {
-            NotesListView(reloadNote: $reloadNote, useOtherNotes: false, notes: viewModel.myNotes)
+            NotesListView(reloadNote: $reloadNote, useOtherNotes: false, notes: myNotes)
             .tabItem {
             Label("My Notes", systemImage: "1.square.fill")
             }
             .tag(0)
 
-            NotesListView(reloadNote: $reloadNote, useOtherNotes: true, notes: viewModel.othersNotes)
+            NotesListView(reloadNote: $reloadNote, useOtherNotes: true, notes: othersNotes)
             .tabItem {
             Label("Other's Notes", systemImage: "2.square.fill")
             }

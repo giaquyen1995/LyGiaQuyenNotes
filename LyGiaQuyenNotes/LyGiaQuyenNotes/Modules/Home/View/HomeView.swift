@@ -15,7 +15,8 @@ struct HomeView: View {
     @State private var selection = 0
     @State private var selectedNote: Note? = nil
     @State private var reloadNote = false
-    
+    @State var myNotes:[Note] = []
+    @State var othersNotes:[Note] = []
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor.white
@@ -28,13 +29,13 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             TabView(selection: $selection) {
-                NotesListView(reloadNote: $reloadNote, useOtherNotes: false, notes: viewModel.myNotes)
+                NotesListView(reloadNote: $reloadNote, useOtherNotes: false, notes: myNotes)
                     .tabItem {
                         Label("My Notes", systemImage: "1.square.fill")
                     }
                     .tag(0)
                 
-                NotesListView(reloadNote: $reloadNote, useOtherNotes: true, notes: viewModel.othersNotes)
+                NotesListView(reloadNote: $reloadNote, useOtherNotes: true, notes: othersNotes)
                     .tabItem {
                         Label("Other's Notes", systemImage: "2.square.fill")
                     }
@@ -58,6 +59,10 @@ struct HomeView: View {
                 viewModel.fetchNotes()
             }
         }
+        .onReceive(viewModel.$myNotes.combineLatest(viewModel.$othersNotes), perform: { (myNotes,otherNotes) in
+            self.myNotes = myNotes
+            self.othersNotes = otherNotes
+        })
         .onChange(of: reloadNote) { _ in
             viewModel.fetchNotes()
             reloadNote = false
