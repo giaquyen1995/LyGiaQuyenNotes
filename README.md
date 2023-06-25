@@ -25,7 +25,130 @@ MVVM has three main components: Model, View, and ViewModel.
 
 - MVVM separates our view from our business logic. By using the MVVM pattern, the application can achieve a clean, modular design where it's easy to understand how different parts of the code interact, making the codebase easier to maintain and evolve over time.
 
+# Detail Overview
 
+#### Model 
+
+Represents the data and business logic of the app
+
+```swift
+public struct NoteResponse: Codable {
+public let userId: String
+public let notes: [Note] 
+}
+```
+
+#### View 
+
+The View represents the UI of the app Text, Tabview...
+
+```swift
+var body: some View {
+NavigationView {
+TabView(selection: $selection) {
+NotesListView(reloadNote: $reloadNote, useOtherNotes: false, notes: viewModel.myNotes)
+.tabItem {
+Label("My Notes", systemImage: "1.square.fill")
+}
+.tag(0)
+
+NotesListView(reloadNote: $reloadNote, useOtherNotes: true, notes: viewModel.othersNotes)
+.tabItem {
+Label("Other's Notes", systemImage: "2.square.fill")
+}
+.tag(1)
+}
+}
+}
+```
+
+#### ViewModel
+
+* ViewModel is the main point of MVVM application. The primary responsibility of the ViewModel is to provide data to the view, so that view can put that data on the screen.
+* It also allows the user to interact with data and change the data.
+* The other key responsibility of a ViewModel is to encapsulate the interaction logic for a view, but it does not mean that all of the logic of the application should go into ViewModel.
+* It should be able to handle the appropriate sequencing of calls to make the right thing happen based on user or any changes on the view.
+* ViewModel should also manage any navigation logic like deciding when it is time to navigate to a different view.
+[Source](https://www.tutorialspoint.com/mvvm/mvvm_responsibilities.htm)
+
+ViewModel performs pure transformation of a user Input to the Output:
+
+```swift
+@MainActor class HomeViewModel: BaseObservableObject {
+@Published var myNotes:[Note] = []
+@Published var othersNotes:[Note] = []
+
+func fetchNotes() {}
+}
+```
+
+```swift
+struct HomeView: View { 
+@StateObject var viewModel = HomeViewModel()
+}
+```
+
+A ViewModel can be injected into a View. In the current example, this is done by HomeView.
+
+```swift
+.onChange(of: reloadNote) { _ in
+viewModel.fetchNotes()
+reloadNote = false
+}
+```
+The user interacts with the model view through the view. In the current example, call the api to get the list of notes
+
+```swift
+func fetchNotes() {
+self.isLoading = true
+let task =  Task {
+do {
+let myNotes = try await API.getMyNotes(forUser: FireBaseManager.shared.userId)
+let othersNotes = try await API.getOthersNotes()
+
+} catch {
+print("Error fetching notes: \(error)")
+self.isLoading = false
+
+}
+}
+addTasks([task])
+}
+```
+ViewModel interacts with Model to request and receive data. In current example, call api list to firebase server
+
+```swift 
+@MainActor class HomeViewModel: BaseObservableObject {
+@Published var myNotes:[Note] = []
+@Published var othersNotes:[Note] = []
+
+func fetchNotes() {
+///
+self.myNotes = myNotes.sorted(by: { $0.date > $1.date })
+self.othersNotes = othersNotes.sorted(by: { $0.date > $1.date })
+///
+}
+```   
+ViewModel returns data on View through binding. In the current example, when model update data for myNotes and otherNotes, the data return via @ObservableObject
+
+```swift
+NavigationView {
+TabView(selection: $selection) {
+NotesListView(reloadNote: $reloadNote, useOtherNotes: false, notes: viewModel.myNotes)
+.tabItem {
+Label("My Notes", systemImage: "1.square.fill")
+}
+.tag(0)
+
+NotesListView(reloadNote: $reloadNote, useOtherNotes: true, notes: viewModel.othersNotes)
+.tabItem {
+Label("Other's Notes", systemImage: "2.square.fill")
+}
+.tag(1)
+}
+}
+```
+View UI updates when a data update signal is received from the ViewModel via the @StateObject listener mechanism
 # Approach
 
 The approach taken to develop this application involves:
