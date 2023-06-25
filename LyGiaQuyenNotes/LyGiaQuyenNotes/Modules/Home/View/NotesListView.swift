@@ -15,21 +15,10 @@ struct NotesListView: View {
     
     var body: some View {
         List(notes) { note in
-            VStack(alignment: .leading) {
-                Text(note.title)
-                    .font(.headline)
-                Text(note.description)
-                    .font(.subheadline)
-                    .lineLimit(1)
-                Text(note.date.convertDateFormat() ?? "")
-                    .font(.subheadline)
-                if useOtherNotes {
-                    Text(note.user)
-                        .font(.subheadline)
+            notesCell(note, useOtherNotes: useOtherNotes)
+                .onTapGesture {
+                    selectedNote = note
                 }
-            }.onTapGesture {
-                selectedNote = note
-            }
         } .background(
             NavigationLink(
                 destination: CreateNoteView(reloadNote: $reloadNote, note: selectedNote, isEditable: !useOtherNotes),
@@ -38,5 +27,24 @@ struct NotesListView: View {
             )
             .hidden()
         )
+    }
+}
+
+extension NotesListView {
+    @ViewBuilder
+    func notesCell(_ note: Note, useOtherNotes: Bool) -> some View {
+        VStack(alignment: .leading) {
+            Text(note.title)
+                .font(.headline)
+            Text(note.description)
+                .font(.subheadline)
+                .lineLimit(1)
+            Text(note.date.convertDateFormat() ?? "")
+                .font(.subheadline)
+            if useOtherNotes {
+                Text(note.user)
+                    .font(.subheadline)
+            }
+        }
     }
 }

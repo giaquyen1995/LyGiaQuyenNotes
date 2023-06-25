@@ -17,49 +17,17 @@ struct CreateNoteView: View {
     var note: Note?
     var isEditable: Bool
     
-    var btnBack : some View {
-        Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
-        }) {
-            HStack {
-                Image(systemName: "chevron.left")
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.black)
-            }
-        }
-    }
     
     var body: some View {
         VStack (spacing: 20) {
-            VStack(alignment: .leading,spacing: 5) {
-                
-                Text("Title")
-                    .font(.headline)
-                
-                TextFieldView(title: "Enter your title", backgroundColor: .white, text: $noteTitle)
-                    .disabled(!isEditable)
-                    .focused($isKeyboardActive)
-            }
-            
-            VStack(alignment: .leading, spacing: 5) {
-                
-                Text("Description")
-                    .font(.headline)
-                TextEditor(text: $noteDescription)
-                    .padding()
-                    .background(Color.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .disabled(!isEditable)
-            }
+            noteTitleView
+            noteDescriptionView
         }
         .padding()
         .background(Color(UIColor.systemGray6))
         .navigationBarBackButtonHidden(true)
         .navigationTitle(note == nil ? "Create note" : "Update note")
-        .navigationBarItems(leading: btnBack)
-        .navigationBarItems(trailing: isEditable ?  Button("Done") {
-            viewModel.createOrUpDateNote(noteId: note?.id, title: noteTitle, description: noteDescription)
-        } : nil )
+        .navigationBarItems(leading: btnBack, trailing: isEditable ? doneButton : nil)
         .onReceive(viewModel.$isSucess) { isSucess in
             if isSucess {
                 reloadNote = true
@@ -75,8 +43,48 @@ struct CreateNoteView: View {
                 noteDescription = note.description
             }
             viewModel.showKeyboard(isEditable: isEditable)
-           
         }
     }
 }
-
+private extension CreateNoteView {
+    
+    var btnBack : some View {
+        Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+        }) {
+            HStack {
+                Image(systemName: "chevron.left")
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(.black)
+            }
+        }
+    }
+    
+    
+    var noteTitleView: some View {
+        VStack(alignment: .leading, spacing: 5) {
+            Text("Title")
+                .font(.headline)
+            TextFieldView(title: "Enter your title", backgroundColor: .white, text: $noteTitle)
+                .disabled(!isEditable)
+                .focused($isKeyboardActive)
+        }
+    }
+    
+    var noteDescriptionView: some View {
+        VStack(alignment: .leading, spacing: 5) {
+            Text("Description")
+                .font(.headline)
+            TextEditor(text: $noteDescription)
+                .padding()
+                .background(Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .disabled(!isEditable)
+        }
+    }
+    private var doneButton: some View {
+        Button("Done") {
+            viewModel.createOrUpDateNote(noteId: note?.id, title: noteTitle, description: noteDescription)
+        }
+    }
+}

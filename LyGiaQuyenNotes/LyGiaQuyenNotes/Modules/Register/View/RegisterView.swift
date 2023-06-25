@@ -21,46 +21,12 @@ struct RegisterView: View {
     @State private var showAlert = false
     @State private var isLoading = false
     
-    var btnBack : some View {
-        Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
-        }) {
-            HStack {
-                Image(systemName: "chevron.left")
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.black)
-            }
-        }
-    }
-    
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            VStack(alignment: .leading) {
-                Text("Sign up")
-                    .foregroundColor(.blueApp)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                Text("Please create a new account")
-                    .font(.headline)
-            }
-            TextFieldView(title: "Email", text: $username)
-                .keyboardType(.emailAddress)
-            SecureTextFieldView(title: "Password", text: $password)
-            SecureTextFieldView(title: "Confirm password", text: $confirmPassword)
-            
-            Button(action: {
-                registerViewModel.registerUser(email: username, password: password)
-            }) {
-                Text("Sign up")
-                    .foregroundColor(.white)
-                    .font(.headline)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.blueApp)
-                    .cornerRadius(10.0)
-            }
-            
+            registerHeader
+            inputForm
+            signUpButton
             Spacer()
         }
         .padding()
@@ -86,6 +52,55 @@ struct RegisterView: View {
         }
         .onReceive(registerViewModel.$isLoading) { isLoading in
             self.isLoading = isLoading
+        }
+        
+    }
+}
+
+extension RegisterView {
+    var btnBack: some View {
+        Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+        }) {
+            HStack {
+                Image(systemName: "chevron.left")
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(.black)
+            }
+        }
+    }
+    
+    var registerHeader: some View {
+        VStack(alignment: .leading) {
+            Text("Sign up")
+                .foregroundColor(.blueApp)
+                .font(.largeTitle)
+                .fontWeight(.bold)
+            Text("Please create a new account")
+                .font(.headline)
+        }
+    }
+    
+    var signUpButton: some View {
+        Button(action: {
+            registerViewModel.registerUser(email: username, password: password)
+        }) {
+            Text("Sign up")
+                .foregroundColor(.white)
+                .font(.headline)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(Color.blueApp)
+                .cornerRadius(10.0)
+        }
+    }
+    
+    var inputForm: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            TextFieldView(title: "Email", text: $username)
+                .keyboardType(.emailAddress)
+            SecureTextFieldView(title: "Password", text: $password)
+            SecureTextFieldView(title: "Confirm password", text: $confirmPassword)
         }
         
     }

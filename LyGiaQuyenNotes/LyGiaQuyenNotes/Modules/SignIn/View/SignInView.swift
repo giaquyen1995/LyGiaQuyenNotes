@@ -17,40 +17,10 @@ struct SignInView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading, spacing: 20) {
-                VStack(alignment: .leading) {
-                    Text("Sign in")
-                        .foregroundColor(.blueApp)
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                    Text("Please log in into your account")
-                        .font(.headline)
-                }
-                TextFieldView(title: "Email", text: $username)
-                    .keyboardType(.emailAddress)
-                SecureTextFieldView(title: "Password", text: $password)
-                Button(action: {
-                    self.viewModel.signin(email: self.username, password: self.password)
-                }) {
-                    Text("Sign in")
-                        .foregroundColor(.white)
-                        .font(.headline)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blueApp)
-                        .cornerRadius(10.0)
-                }
-                
-                NavigationLink(destination: RegisterView().environmentObject(appRouter)) {
-                    HStack(spacing: 0) {
-                        Text("Don't have an account? ")
-                            .font(.subheadline)
-                            .foregroundColor(.black)
-                        Text("Sign Up")
-                            .font(.subheadline)
-                            .fontWeight(.bold)
-                            .foregroundColor(.blueApp)
-                    }
-                }
+                signInHeader
+                inputForm
+                signInButton
+                signUpLink
                 Spacer()
             }
             .padding()
@@ -74,4 +44,56 @@ struct SignInView: View {
         .accessibilityIdentifier("signinScreenElement") // for unit test
         
     }
+}
+
+extension SignInView {
+    
+    var inputForm: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            TextFieldView(title: "Email", text: $username)
+                .keyboardType(.emailAddress)
+            SecureTextFieldView(title: "Password", text: $password)
+        }
+        
+    }
+    
+    var signInHeader: some View {
+        VStack(alignment: .leading) {
+            Text("Sign in")
+                .foregroundColor(.blueApp)
+                .font(.largeTitle)
+                .fontWeight(.bold)
+            Text("Please log in into your account")
+                .font(.headline)
+        }
+    }
+    
+    var signInButton: some View {
+        Button(action: {
+            self.viewModel.signin(email: self.username, password: self.password)
+        }) {
+            Text("Sign in")
+                .foregroundColor(.white)
+                .font(.headline)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(Color.blueApp)
+                .cornerRadius(10.0)
+        }
+    }
+    
+    var signUpLink: some View {
+        NavigationLink(destination: RegisterView().environmentObject(appRouter)) {
+            HStack(spacing: 0) {
+                Text("Don't have an account? ")
+                    .font(.subheadline)
+                    .foregroundColor(.black)
+                Text("Sign Up")
+                    .font(.subheadline)
+                    .fontWeight(.bold)
+                    .foregroundColor(.blueApp)
+            }
+        }
+    }
+    
 }

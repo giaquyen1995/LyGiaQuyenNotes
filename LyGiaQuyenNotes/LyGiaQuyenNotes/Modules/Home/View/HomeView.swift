@@ -18,28 +18,11 @@ struct HomeView: View {
     @State var myNotes:[Note] = []
     @State var othersNotes:[Note] = []
     
-    init() {
-        UITabBar.appearance().backgroundColor = UIColor.white
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-    }
-    
     var body: some View {
         NavigationView {
             TabView(selection: $selection) {
-                NotesListView(reloadNote: $reloadNote, useOtherNotes: false, notes: myNotes)
-                    .tabItem {
-                        Label("My Notes", systemImage: "1.square.fill")
-                    }
-                    .tag(0)
-                
-                NotesListView(reloadNote: $reloadNote, useOtherNotes: true, notes: othersNotes)
-                    .tabItem {
-                        Label("Other's Notes", systemImage: "2.square.fill")
-                    }
-                    .tag(1)
+                myNotesView
+                othersNotesView
             }
             .accentColor(.blue)
             .navigationBarTitleDisplayMode(.inline)
@@ -95,5 +78,22 @@ private extension HomeView {
             Image(systemName: "plus")
         }
     }
+    
+    var myNotesView: some View {
+        NotesListView(reloadNote: $reloadNote, useOtherNotes: false, notes: myNotes)
+            .tabItem {
+                Label("My Notes", systemImage: "1.square.fill")
+            }
+            .tag(0)
+    }
+    
+    var othersNotesView: some View {
+        NotesListView(reloadNote: $reloadNote, useOtherNotes: true, notes: othersNotes)
+            .tabItem {
+                Label("Other's Notes", systemImage: "2.square.fill")
+            }
+            .tag(1)
+    }
+    
 }
 
