@@ -6,7 +6,8 @@ LyGiaQuyenNotes is a simple iOS application developed using SwiftUI. It allows u
 
 In this project I apply MVVM.
 
-#MVVM (Model–View–ViewModel)
+# MVVM (Model–View–ViewModel)
+
 MVVM is one of the most favored patterns currently, as it has had ample time to mature. The web community adopted this pattern after it was formalized by Microsoft team in 2005. It has since been incorporated into every UI-based framework. One of the key advantages of MVVM is that it offers an optimal level of decoupling. Another positive aspect is that the learning curve is similar to other patterns.
 
 MVVM has three main components: Model, View, and ViewModel.
@@ -20,12 +21,12 @@ MVVM has three main components: Model, View, and ViewModel.
 
 - **ViewModel**: The ViewModel serves as a bridge between the Model and the View. It exposes the data and commands that the View can use to perform actions. This means that the View doesn't need to know anything about the Model, which helps to keep the UI code clean and simple. The ViewModels in this app handle operations such as saving and retrieving notes from Firebase.
 
-#Why MVVM with Clean Architecture?
-MVVM separates our view from our business logic. MVVM is sufficient for small projects, but when our codebase becomes large, our ViewModels start bloating. Separating responsibilities becomes challenging.
+# Why MVVM with Clean Architecture?
 
-MVVM with Clean Architecture is a good solution in such cases. It goes a step further in segregating the responsibilities of our codebase. It clearly abstracts the logic of the actions that can be performed in our app.
+- MVVM separates our view from our business logic. By using the MVVM pattern, the application can achieve a clean, modular design where it's easy to understand how different parts of the code interact, making the codebase easier to maintain and evolve over time.
 
-## Approach
+
+# Approach
 
 The approach taken to develop this application involves:
 
@@ -38,7 +39,7 @@ The approach taken to develop this application involves:
 4. **Data Management**: Integration of Firebase real-time database for saving and fetching notes. The database structure has been designed to store notes against the respective usernames.
 
 
-## Time Spent
+# Time Spent
 
 The following is an approximation of the time spent during the development:
 
@@ -58,7 +59,7 @@ The following is an approximation of the time spent during the development:
 
 4. Data Validation: The application currently doesn't validate the input data, which could lead to saving of inappropriate content.
 
-## Running the Application
+# Running the Application
 
 1. Clone the repo
 2. Open the project in Xcode
