@@ -33,8 +33,8 @@ Represents the data and business logic of the app
 
 ```swift
 public struct NoteResponse: Codable {
-public let userId: String
-public let notes: [Note] 
+    public let userId: String
+    public let notes: [Note] 
 }
 ```
 
