@@ -24,6 +24,7 @@ final class LyGiaQuyenNotesTests: XCTestCase {
         }
     }
     
+    // sometimes test case crash because firebase test instance and firebase real config version don't sync with each other
     func testGetMyNotes() {
         let expectation = XCTestExpectation(description: "Completion my notes \(Int.random(in: 0...9999))")
         
@@ -47,6 +48,7 @@ final class LyGiaQuyenNotesTests: XCTestCase {
         XCTAssertNotNil(result, "Result should not be nil")
     }
     
+    // sometimes test case crash because firebase test instance and firebase real config version don't sync with each other
     func testGetOthersNotes() {
         let expectation = XCTestExpectation(description: "Completion other note \(Int.random(in: 0...9999))")
         
@@ -70,7 +72,7 @@ final class LyGiaQuyenNotesTests: XCTestCase {
     }
     
     
-    
+    // sometimes test case crash because firebase test instance and firebase real config version don't sync with each other
     func testRegister() {
         let email = "testuser\(Int.random(in: 1000...9999))@example.com"
         let password = "TestPassword123"
@@ -89,7 +91,7 @@ final class LyGiaQuyenNotesTests: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
    
-    
+    // sometimes test case crash because firebase test instance and firebase real config version don't sync with each other
     func testSignIn() {
         let email = "giaquyen@gmail.com"
         let password = "123456"
@@ -110,6 +112,7 @@ final class LyGiaQuyenNotesTests: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
     
+    // sometimes test case crash because firebase test instance and firebase real config version don't sync with each other
     func testSignout() {
         let expectation = XCTestExpectation(description: "Completion sign out \(Int.random(in: 0...9999))")
         Task {
@@ -139,6 +142,7 @@ final class LyGiaQuyenNotesTests: XCTestCase {
         return randomString
     }
     
+    // sometimes test case crash because firebase test instance and firebase real config version don't sync with each other
     func testCreateNote() {
         let userID = FireBaseManager.shared.userId
         let email = FireBaseManager.shared.userName

@@ -72,6 +72,8 @@ struct CreateNoteView: View {
                 noteTitle = note.title
                 noteDescription = note.description
             }
+            
+            // used to wait display keyboard
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 isKeyboardActive = isEditable ? true : false
             }

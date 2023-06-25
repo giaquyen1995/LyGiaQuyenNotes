@@ -16,6 +16,7 @@ struct SplashView: View {
                 .aspectRatio(contentMode: .fill)
                 .edgesIgnoringSafeArea(.all)
         }.onAppear {
+            // I wanted this place to show the logo at splash a little longer so I delay 0.5 seconds
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 withAnimation {
                     appRouter.checkIfUserIsSignedIn()

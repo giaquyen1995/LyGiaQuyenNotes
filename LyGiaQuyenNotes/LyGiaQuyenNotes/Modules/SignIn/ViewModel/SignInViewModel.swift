@@ -16,6 +16,8 @@ import Combine
     
     func signin(email: String, password: String)  {
         isLoading = true
+        
+        // Because the firebase api is fast, it doesn't feel real so I delay 0.5 load time to see the UI better
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             let task = Task {
                 do {
