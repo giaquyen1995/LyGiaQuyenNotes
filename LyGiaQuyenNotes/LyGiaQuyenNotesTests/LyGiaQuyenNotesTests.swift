@@ -143,7 +143,7 @@ final class LyGiaQuyenNotesTests: XCTestCase {
         let userID = FireBaseManager.shared.userId
         let email = FireBaseManager.shared.userName
         let title = "noteTitle"
-        let content = "noteContent"
+        let description = "noteContent"
         let date = Date().toString(format: "yyyy-MM-dd'T'HH:mm:ss")
         let id = generateRandomString()
 
@@ -151,7 +151,7 @@ final class LyGiaQuyenNotesTests: XCTestCase {
         
         Task {
             do {
-                try await API.createOrUpdateNote(note: Note(id: id, title: title, content: content, date: date, user: ""), userId: userID, noteId: id)
+                try await API.createOrUpdateNote(note: Note(id: id, title: title, description: description, date: date, user: ""), userId: userID, noteId: id)
                 expectation.fulfill()
             } catch {
                 XCTFail("Sign In failed with error: \(error)")
