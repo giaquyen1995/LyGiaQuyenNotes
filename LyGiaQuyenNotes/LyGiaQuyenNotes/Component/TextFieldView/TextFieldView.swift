@@ -9,11 +9,13 @@ import SwiftUI
 
 struct TextFieldView: View {
     var title: String
+    var backgroundColor: Color = Color(.systemGray6)
+
     @Binding var text: String
     var body: some View {
         TextField(title, text: $text)
             .padding()
-            .background(Color(.systemGray6))
-            .cornerRadius(5.0)
+            .background(backgroundColor)
+            .cornerRadius(10.0)
     }
 }

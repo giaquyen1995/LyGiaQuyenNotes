@@ -23,14 +23,14 @@ public struct NoteResponse: Codable {
     
     private static func parseNoteData(noteId: String, noteData: Any) -> Note? {
         guard let noteDict = noteData as? [String: Any],
-              let content = noteDict["content"] as? String,
+              let description = noteDict["description"] as? String,
               let date = noteDict["date"] as? String,
               let title = noteDict["title"] as? String,
               let user = noteDict["user"] as? String else {
             return nil
         }
         
-        return Note(id: noteId, title: title, content: content, date: date, user: user)
+        return Note(id: noteId, title: title, description: description, date: date, user: user)
     }
     
     
@@ -77,21 +77,21 @@ public struct NoteResponse: Codable {
 public struct Note: Codable, Identifiable {
     public var id: String
     public var title: String
-    public var content: String
+    public var description: String
     public var date: String
     public var user: String
     
     enum CodingKeys: String, CodingKey {
         case id
         case title
-        case content
+        case description
         case date
         case user
     }
-    init(id: String, title: String, content: String, date: String, user: String) {
+    init(id: String, title: String, description: String, date: String, user: String) {
         self.id = id
         self.title = title
-        self.content = content
+        self.description = description
         self.user = user
         self.date = date
     }
@@ -101,7 +101,7 @@ public struct Note: Codable, Identifiable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(String.self, forKey: .id)
         title = try container.decode(String.self, forKey: .title)
-        content = try container.decode(String.self, forKey: .content)
+        description = try container.decode(String.self, forKey: .description)
         date = try container.decode(String.self, forKey: .date)
         user = try container.decode(String.self, forKey: .user)
     }

@@ -18,8 +18,9 @@ struct NotesListView: View {
             VStack(alignment: .leading) {
                 Text(note.title)
                     .font(.headline)
-                Text(note.content)
+                Text(note.description)
                     .font(.subheadline)
+                    .lineLimit(1)
                 Text(note.date.convertDateFormat() ?? "")
                     .font(.subheadline)
                 if useOtherNotes {
