@@ -41,19 +41,20 @@ final class LyGiaQuyenNotesUITests: XCTestCase {
     
     func testSignin() throws {
         continueAfterFailure = false
-                
+        
         let app = XCUIApplication()
         
         app.launch()
         let homeScreenElement = app.otherElements["homeScreenElement"]
-
-        if homeScreenElement.exists {
-            app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["giaquyen@gmail.com"].tap()
-            app.alerts["Sign out"].scrollViews.otherElements.buttons["Sign out"].tap()
-          }
-
         
-        let usernameField = app.textFields["User name"]
+        let possibleLoggedInEmailButton = app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons.firstMatch
+           if possibleLoggedInEmailButton.exists {
+               possibleLoggedInEmailButton.tap()
+               app.alerts["Sign out"].scrollViews.otherElements.buttons["Sign out"].tap()
+           }
+        
+        
+        let usernameField = app.textFields["Email"]
         let passwordField = app.secureTextFields["Password"]
         let signInButton = app.buttons["Sign in"]
         // Tap on the fields and enter text
@@ -67,33 +68,30 @@ final class LyGiaQuyenNotesUITests: XCTestCase {
         signInButton.tap()
         
         XCTAssertTrue(homeScreenElement.waitForExistence(timeout: 5))
-
+        
     }
     
     func testSignup() throws {
         continueAfterFailure = false
-                
+        
         let app = XCUIApplication()
         
         app.launch()
         let homeScreenElement = app.otherElements["homeScreenElement"]
+        
+        let possibleLoggedInEmailButton = app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons.firstMatch
+           if possibleLoggedInEmailButton.exists {
+               possibleLoggedInEmailButton.tap()
+               app.alerts["Sign out"].scrollViews.otherElements.buttons["Sign out"].tap()
+           }
+        
+        XCUIApplication().buttons["Don't have an account? , Sign Up"].tap()
 
-        if homeScreenElement.exists {
-            app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["giaquyen@gmail.com"].tap()
-            app.alerts["Sign out"].scrollViews.otherElements.buttons["Sign out"].tap()
-          }
-
-                        let signInScreenElement = app.otherElements["signinScreenElement"]
-
-        if signInScreenElement.exists {
-            XCUIApplication().buttons["Don't have an account? , Sign Up"].tap()
-                                   
-          }
         
         let usernameField = app.textFields["Email"]
         let passwordField = app.secureTextFields["Password"]
         let confirmPasswordField = app.secureTextFields["Confirm password"]
-
+        
         let signupButton = app.buttons["Sign up"]
         // Tap on the fields and enter text
         usernameField.tap()
