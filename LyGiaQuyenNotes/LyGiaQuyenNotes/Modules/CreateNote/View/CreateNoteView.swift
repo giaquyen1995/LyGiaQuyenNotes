@@ -38,18 +38,17 @@ struct CreateNoteView: View {
                 
                 TextFieldView(title: "Enter your title", backgroundColor: .white, text: $noteTitle)
                     .disabled(!isEditable)
+                    .focused($isKeyboardActive)
             }
             
             VStack(alignment: .leading, spacing: 5) {
                 
                 Text("Description")
                     .font(.headline)
-                
                 TextEditor(text: $noteDescription)
                     .padding()
                     .background(Color.white)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .focused($isKeyboardActive)
                     .disabled(!isEditable)
             }
         }
@@ -67,15 +66,16 @@ struct CreateNoteView: View {
                 self.presentationMode.wrappedValue.dismiss()
             }
         }
+        .onReceive(viewModel.$isKeyboardActive) { isKeyboardActive in
+            self.isKeyboardActive = isKeyboardActive
+        }
         .onAppear {
             if let note = note {
                 noteTitle = note.title
                 noteDescription = note.description
             }
-            // used to wait display keyboard for UI better 
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { 
-                isKeyboardActive = isEditable ? true : false
-            }
+            viewModel.showKeyboard(isEditable: isEditable)
+           
         }
     }
 }

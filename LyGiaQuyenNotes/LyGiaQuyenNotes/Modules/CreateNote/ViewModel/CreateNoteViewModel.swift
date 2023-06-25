@@ -11,6 +11,15 @@ import Combine
 
 @MainActor class CreateNoteViewModel: BaseObservableObject {
     @Published var isSucess = false
+    @Published var isKeyboardActive = false
+
+    func showKeyboard(isEditable:Bool){
+        // used to wait display keyboard for UI better
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {[weak self] in
+            guard let `self` = self else {return}
+            self.isKeyboardActive = isEditable ? true : false
+        }
+    }
     
     func createOrUpDateNote(noteId: String?, title:String, description:String) {
         
